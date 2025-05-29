@@ -1,0 +1,115 @@
+@use '../../sass/common' as *;
+
+.section {
+	position: relative;
+	padding-top: 7em;
+	height: 100svh;
+	background-image: url('/photos/hero_photo.jpg');
+	background-size: cover;
+	background-position: center;
+	overflow: clip;
+	z-index: 0;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: linear-gradient(
+			to top right,
+			rgba(0, 0, 0, 1),
+			rgba(0, 0, 0, 0.3)
+		);
+		z-index: -1;
+	}
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: start;
+		color: $white;
+	}
+
+	h1 {
+		position: relative;
+		width: fit-content;
+		margin-bottom: 1.5em;
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: 1.45em;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: -0.2em;
+			left: 0;
+			width: 110%;
+			height: 1px;
+			background-color: rgba(255, 255, 255, 0.7);
+		}
+	}
+
+	h2 {
+		font-size: 2.5em;
+		text-transform: uppercase;
+		letter-spacing: 5px;
+		font-weight: 600;
+	}
+
+	h1,
+	h2 {
+		animation: fade-in-down 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+		animation-delay: 0.5s;
+	}
+
+	.ctaBtn {
+		@include mainButton;
+		margin-top: 5em;
+	}
+
+	.socialBtn {
+		padding: 0.5em;
+		margin-top: 2.5em;
+
+		img {
+			width: 2.5em;
+		}
+	}
+
+	.ctaBtn,
+	.socialBtn {
+		animation: fade-in-up 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+		animation-delay: 0.5s;
+	}
+}
+
+@media(width >= 576px) {
+	.section {
+		h1 {
+			font-size: 1.65em;
+		}
+
+		h2 {
+			font-size: 2.7em;
+		}
+	}
+}
+
+@media(width >= 768px) {
+	.section {
+		h1 {
+			margin-bottom: 2.5em;
+		}
+	}
+}
+
+@media(width >= 992px) {
+	.section {
+		.wrapper {
+			padding-left: 5em;
+		}
+	}
+}

@@ -1,0 +1,25 @@
+@use './colors' as *;
+
+@mixin heading {
+	font-family: var(--font-barlow);
+	letter-spacing: 5%;
+	text-transform: uppercase;
+	font-size: 3em;
+}
+
+@mixin shadow {
+	box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+}
+
+@mixin mainButton {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.1em 1.3em;
+	width: fit-content;
+	font-weight: bold;
+	background-color: $green;
+	border-radius: 6px;
+	text-transform: uppercase;
+	color: $white;
+}
