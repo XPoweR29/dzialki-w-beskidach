@@ -7,8 +7,20 @@
 	font-size: 3em;
 }
 
+@mixin sectionHeading {
+	font-size: 2em;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+@mixin text {
+	line-height: 1.8em;
+	font-weight: 500;
+}
+
 @mixin shadow {
-	box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
+	box-shadow: -3px 3px 15px 5px #0006;
 }
 
 @mixin mainButton {

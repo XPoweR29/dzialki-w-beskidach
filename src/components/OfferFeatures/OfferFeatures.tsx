@@ -11,7 +11,7 @@ import { useInView } from 'motion/react';
 
 export const OfferFeatures = ({ className }: {className?: string}) => {
 	const containerRef = useRef(null);
-	const inView = useInView(containerRef, {once: false, amount: 1});
+	const inView = useInView(containerRef, {once: true, amount: 1});
 
 	return (
 		<div className={`${styles.feature} ${className}`} ref={containerRef}>

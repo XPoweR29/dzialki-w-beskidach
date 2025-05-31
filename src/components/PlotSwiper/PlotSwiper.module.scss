@@ -1,0 +1,29 @@
+.swiper {
+	.slide {
+		padding: 0 4%;
+		@media (width>=450px) {
+			padding: 0 10%;
+		}
+		@media (width>=576px) {
+			padding: 0 15%;
+		}
+		@media (width>=650px) {
+			padding: 0 20%;
+		}
+		@media (width>=768px) {
+			padding: 0;
+		}
+		@media (width>=800px) {
+			padding: 0 2%;
+		}
+		@media (width>=992px) {
+			padding: 0;
+		}
+	}
+}
+
+@media (width >= 768px) {
+	.swiperButton {
+		padding-top: 2em;
+	}
+}

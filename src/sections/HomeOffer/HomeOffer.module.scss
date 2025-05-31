@@ -2,18 +2,15 @@
 
 .section {
 	position: relative;
-	top: -30px;
+	margin-top: -40px;
 	padding: 5em 0;
-	border-radius: 30px 30px 0px 0px;
+	border-radius: 40px 40px 0px 0px;
 	background-color: $white;
 	overflow: hidden;
 	z-index: 2;
 
 	.heading {
-		font-size: 2em;
-		letter-spacing: 2px;
-		text-align: center;
-		text-transform: uppercase;
+		@include sectionHeading;
 	}
 
 	.text {
@@ -46,6 +43,9 @@
 
 @media (width >= 768px) {
 	.section {
+		margin-top: -60px;
+		border-radius: 60px 60px 0px 0px;
+
 		.photo {
 			width: 80%;
 			height: 450px;
@@ -59,61 +59,61 @@
 
 @media (width >= 992px) {
 	.section {
-        padding-top: 7em;
+		padding-top: 7em;
 
 		.wrapper {
 			display: flex;
-            flex-direction: column;
+			flex-direction: column;
 		}
 
+		.text,
+		.heading {
+			width: 50%;
+		}
 
-        .text, .heading {
-            width: 50%;
-        }
-
-        .heading {
-            text-align: start;
-        }
+		.heading {
+			text-align: start;
+		}
 
 		.photo {
-            width: 45%;
-            height: auto;
+			width: 45%;
+			height: auto;
 		}
 
-        .features {
-            margin-top: 3.5em;
-        }
+		.features {
+			margin-top: 3.5em;
+		}
 	}
 }
 
 @media (width >= 992px) {
-    .section {
-        .photo {
-            margin-top: 0;
-            max-width: 580px;
-        }
-    }
+	.section {
+		.photo {
+			margin-top: 0;
+			max-width: 580px;
+		}
+	}
 }
 
 @media (width >= 1400px) {
-    .section {
-        .wrapper {
-            flex-direction: row;
-            justify-content: space-between;
-        }
+	.section {
+		.wrapper {
+			flex-direction: row;
+			justify-content: space-between;
+		}
 
-        .container {
-            width: 50%;
-        }
+		.container {
+			width: 50%;
+		}
 
-        .text, .heading {
-            width: fit-content;
-        }
+		.text,
+		.heading {
+			width: fit-content;
+		}
 
-        .photo {
-            position: static;
-            border-radius: 50px 10px 10px 50px;
-        }
-    }
+		.photo {
+			position: static;
+			border-radius: 50px 10px 10px 50px;
+		}
+	}
 }
-

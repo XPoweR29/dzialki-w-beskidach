@@ -1,0 +1,35 @@
+@use '../../sass/common' as *;
+
+.swiperBtns {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 3em;
+	translate: -50% 120%;
+	z-index: 2;
+
+	.prev,
+	.next {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: transparent;
+		font-size: 5rem;
+		color: $black;
+		filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.2));
+		cursor: pointer;
+		transition: opacity 0.2s, color 0.2s;
+		-webkit-tap-highlight-color: transparent; 
+		-moz-user-focus: none; 
+
+		&.disabled {
+			color: $black;
+			opacity: 0.15;
+			cursor: auto;
+			pointer-events: none;
+		}
+	}
+}

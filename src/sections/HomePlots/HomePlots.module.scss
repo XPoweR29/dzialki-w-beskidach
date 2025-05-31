@@ -1,0 +1,46 @@
+@use '../../sass/common' as *;
+
+.section {
+    padding: 5em 0em;
+    padding-top: 3em;
+    overflow: clip;
+    background-color: $white;
+
+    .heading {
+        @include sectionHeading;
+
+        span {
+            font-size: 0.7em;
+            text-transform: none;
+            color: $green
+        }
+    }
+
+    .text {
+        @include text;
+        margin-top: 2em;
+        text-align: left;
+    }
+
+    .plotsContainer {
+        position: relative;
+        display: flex;
+        justify-content: space-evenly;
+        max-width: 1320px;
+        margin: 0 auto;
+        margin-top: 3em;
+    }
+}
+
+@media(width >= 768px) {
+    .section {
+        padding-bottom: 7em;
+
+        .text {
+            margin: 0 auto;
+            margin-top: 2em;
+            max-width: 930px;
+            text-align: center;
+        }
+    }
+}

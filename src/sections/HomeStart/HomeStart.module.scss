@@ -3,7 +3,7 @@
 .section {
 	position: relative;
 	padding-top: 7em;
-	height: calc(100svh + 30px);
+	height: calc(100svh + 40px);
 	background-image: url('/photos/hero_photo.jpg');
 	background-size: cover;
 	background-position: center;
@@ -68,6 +68,13 @@
 	.ctaBtn {
 		@include mainButton;
 		margin-top: 5em;
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+		transition: box-shadow 0.3s, background-color 0.3s, scale 0.3s;
+
+		&:hover {
+			box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+		}
 	}
 
 	.socialBtn {
@@ -81,7 +88,6 @@
 
 			&:hover {
 				scale: 1.15;
-
 			}
 		}
 	}
@@ -93,7 +99,7 @@
 	}
 }
 
-@media(width >= 576px) {
+@media (width >= 576px) {
 	.section {
 		h1 {
 			font-size: 1.65em;
@@ -105,15 +111,17 @@
 	}
 }
 
-@media(width >= 768px) {
+@media (width >= 768px) {
 	.section {
+		height: calc(100svh + 60px);
+
 		h1 {
 			margin-bottom: 2.5em;
 		}
 	}
 }
 
-@media(width >= 992px) {
+@media (width >= 992px) {
 	.section {
 		.wrapper {
 			padding-left: 5em;
