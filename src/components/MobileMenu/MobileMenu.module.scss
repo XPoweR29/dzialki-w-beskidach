@@ -1,5 +1,6 @@
 @use '../../sass/common' as *;
 
+
 .mobileMenu {
 	position: absolute;
 	display: flex;
@@ -46,5 +47,3 @@
 		animation: fadeIn 0.7s;
 	}
 }
-
-//IMPROVE: Add GIT repository

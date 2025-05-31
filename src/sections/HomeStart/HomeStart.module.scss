@@ -3,12 +3,12 @@
 .section {
 	position: relative;
 	padding-top: 7em;
-	height: 100svh;
+	height: calc(100svh + 30px);
 	background-image: url('/photos/hero_photo.jpg');
 	background-size: cover;
 	background-position: center;
 	overflow: clip;
-	z-index: 0;
+	z-index: 1;
 
 	&::after {
 		content: '';
@@ -76,6 +76,13 @@
 
 		img {
 			width: 2.5em;
+			scale: 1;
+			transition: scale 0.3s;
+
+			&:hover {
+				scale: 1.15;
+
+			}
 		}
 	}
 

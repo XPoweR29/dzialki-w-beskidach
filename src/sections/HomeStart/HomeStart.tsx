@@ -1,13 +1,13 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import styles from './home_start.module.scss';
+import styles from './HomeStart.module.scss';
 import { Wrapper } from '@/components/Wrapper/Wrapper';
 import Link from 'next/link';
 import iconFb from '../../assets/icons/icon_facebook.svg';
 import Image from 'next/image';
 
-export const Home_start = () => {
+export const HomeStart = () => {
 	const heroRef = useRef<HTMLDivElement | null>(null);
 
 	const startHeroPosition = `10%`;

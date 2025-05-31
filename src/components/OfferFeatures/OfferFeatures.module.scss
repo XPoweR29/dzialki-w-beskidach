@@ -1,0 +1,61 @@
+@use '../../sass/common' as *;
+
+.feature {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	min-width: 322px;
+	gap: 2.4em;
+	
+	.item {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: center;
+		width: 120px;
+		height: 120px;
+		gap: 1em;
+		opacity: 0;
+		scale: 0;
+
+		&--anime {
+			animation: scale-In 1s ease both;
+		}
+	}
+
+	img {
+		width: 55px;
+	}
+	
+	p {
+		font-weight: 600;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 11px;
+	}
+}
+
+@media(width >= 500px) {
+	.feature {
+		img {
+			width: 65px;
+		}
+
+		p {
+			font-size: 14px;
+		}
+	}
+}
+
+@media(width >= 768px) {
+	.feature {
+		justify-content: center;
+		gap: 4em;
+	}
+}
+
+@media(width >= 992px) {
+	.feature {
+		justify-content: start;
+	}
+}

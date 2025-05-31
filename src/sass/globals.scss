@@ -3,8 +3,9 @@
 @use './common' as *;
 
 body {
-	font-size: 1.4rem;
 	min-width: 350px;
+	font-size: 1.4rem;
+	color: $black;
 
 	h1,
 	h2,

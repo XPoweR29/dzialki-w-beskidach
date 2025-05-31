@@ -17,21 +17,26 @@ export const MobileMenu = () => {
 		}, 10);
 	};
 	return (
-		<ul className={styles.mobileMenu}>
-			{menuLinks.map((link) => (
-				<li key={link.id}>
-					<Link href={link.href} className={styles.link} onClick={handleClick}>
-						{link.name}
-					</Link>
-				</li>
-			))}
-			<a
-				href='tel:504058507'
-				className={styles.phoneButton}
-				aria-label='Zadzwoń pod numer 504 058 507'>
-				<Image src={iconPhone} alt='' aria-hidden draggable={false} />
-				504 058 507
-			</a>
-		</ul>
+		<nav>
+			<ul className={styles.mobileMenu}>
+				{menuLinks.map((link) => (
+					<li key={link.id}>
+						<Link
+							href={link.href}
+							className={styles.link}
+							onClick={handleClick}>
+							{link.name}
+						</Link>
+					</li>
+				))}
+				<a
+					href='tel:504058507'
+					className={styles.phoneButton}
+					aria-label='Zadzwoń pod numer 504 058 507'>
+					<Image src={iconPhone} alt='' aria-hidden draggable={false} />
+					504 058 507
+				</a>
+			</ul>
+		</nav>
 	);
 };

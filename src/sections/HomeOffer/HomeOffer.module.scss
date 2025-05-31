@@ -1,0 +1,119 @@
+@use '../../sass/common' as *;
+
+.section {
+	position: relative;
+	top: -30px;
+	padding: 5em 0;
+	border-radius: 30px 30px 0px 0px;
+	background-color: $white;
+	overflow: hidden;
+	z-index: 2;
+
+	.heading {
+		font-size: 2em;
+		letter-spacing: 2px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.text {
+		margin-top: 2em;
+	}
+
+	.photo {
+		position: absolute;
+		right: 0;
+		margin-top: 4em;
+		width: 90%;
+		height: 350px;
+		border-radius: 50px 0px 0px 50px;
+		object-fit: cover;
+		box-shadow: -3px 3px 15px 5px #0006;
+	}
+
+	.features {
+		margin-top: 480px;
+	}
+}
+
+@media (width >= 500px) {
+	.section {
+		.photo {
+			width: 80%;
+		}
+	}
+}
+
+@media (width >= 768px) {
+	.section {
+		.photo {
+			width: 80%;
+			height: 450px;
+		}
+
+		.features {
+			margin-top: 600px;
+		}
+	}
+}
+
+@media (width >= 992px) {
+	.section {
+        padding-top: 7em;
+
+		.wrapper {
+			display: flex;
+            flex-direction: column;
+		}
+
+
+        .text, .heading {
+            width: 50%;
+        }
+
+        .heading {
+            text-align: start;
+        }
+
+		.photo {
+            width: 45%;
+            height: auto;
+		}
+
+        .features {
+            margin-top: 3.5em;
+        }
+	}
+}
+
+@media (width >= 992px) {
+    .section {
+        .photo {
+            margin-top: 0;
+            max-width: 580px;
+        }
+    }
+}
+
+@media (width >= 1400px) {
+    .section {
+        .wrapper {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .container {
+            width: 50%;
+        }
+
+        .text, .heading {
+            width: fit-content;
+        }
+
+        .photo {
+            position: static;
+            border-radius: 50px 10px 10px 50px;
+        }
+    }
+}
+

@@ -22,4 +22,11 @@
 	border-radius: 6px;
 	text-transform: uppercase;
 	color: $white;
+	scale: 1;
+	transition: background-color 0.3s, scale 0.3s;
+
+	&:hover {
+		background-color: #035e36;
+		scale: 0.97;
+	}
 }

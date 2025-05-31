@@ -1,6 +1,6 @@
 @use '../../sass/common' as *;
 
-.nav {
+.header {
 	position: fixed;
 	left: 50%;
 	top: 1em;
@@ -12,10 +12,14 @@
 	z-index: 100;
 	border-radius: 10px;
 	background-color: white;
-	transition: height 0.5s;
+	transition: height 0.5s, transform 0.7s;
 
 	&.activeMobileMenu {
 		height: 90%;
+	}
+
+	&--hidden {
+		transform: translateX(-50%) translateY(-150%);
 	}
 
 	.navbar_container {
@@ -36,6 +40,7 @@
 		.burgerBtn {
 			-webkit-tap-highlight-color: transparent;
 			-moz-user-focus: none;
+			margin-left: auto;
 		}
 	}
 

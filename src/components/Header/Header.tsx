@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './Header.module.scss';
 import { LinkBar } from '../Nav/Nav';
 import { BurgerBtn } from '../BurgerBtn/BurgerBtn';
@@ -14,28 +14,47 @@ import { usePathname } from 'next/navigation';
 export const Header = () => {
 	const { breakpoint } = useBreakpoints();
 	const { mobileMenuShown, setMobileMenuShown } = useAppContext();
+	const [showNav, setShowNav] = useState(true);
 	const pathname = usePathname();
+	const prevScrollPos = useRef(0);
 
 	const handleClick = (e: React.MouseEvent) => {
-		if(pathname ==="/") {
+		if (pathname === '/') {
 			e.preventDefault();
-			window.scrollTo({top: 0, behavior: 'smooth'})
+			window.scrollTo({ top: 0, behavior: 'smooth' });
 		}
 	};
 
+	useEffect(() => {
+		const handleScroll = () => {
+			const currentScrollPos = window.scrollY;
+
+			if (prevScrollPos.current > currentScrollPos) {
+				setShowNav(true);
+			} else {
+				setShowNav(false);
+				setMobileMenuShown(false);
+			}
+
+			prevScrollPos.current = currentScrollPos;
+		};
+
+		window.addEventListener('scroll', handleScroll);
+		return () => window.removeEventListener('scroll', handleScroll);
+	}, [setMobileMenuShown]);
+
 	return (
-		<nav
-			className={`${styles.nav} ${
-				mobileMenuShown ? styles['activeMobileMenu'] : ''
-			}`}>
+		<header className=
+			{`${styles.header} ${mobileMenuShown ? styles['activeMobileMenu'] : ''} ${!showNav ? styles['header--hidden']:''}`}
+			>
 			<div className={styles.navbar_container}>
 				<Link href={'/'} className={styles.logo} onClick={handleClick}>
 					<Image
 						src={'/logo.png'}
 						width={250}
 						height={52}
-						alt='Działi na sprzedaż w Beskidzie Żywieckim'
-						onClick={() => console.log('Scroll to top mordo!')}
+						alt='Działki na sprzedaż w Beskidzie Żywieckim'
+						priority
 					/>
 				</Link>
 
@@ -51,6 +70,6 @@ export const Header = () => {
 
 				{mobileMenuShown && <MobileMenu />}
 			</div>
-		</nav>
+		</header>
 	);
 };
