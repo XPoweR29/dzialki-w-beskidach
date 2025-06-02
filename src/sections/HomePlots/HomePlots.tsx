@@ -27,7 +27,7 @@ export const HomePlots = () => {
 				initial={{ opacity: 0, y: 30 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				transition={{ duration: 0.5 }}
-				viewport={{ amount: 0.3, once: false }}>
+				viewport={{ amount: 0.3, once: true }}>
 				<PlotSwiper />
 			</motion.div>
 		</section>

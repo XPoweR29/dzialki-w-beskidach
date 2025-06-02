@@ -1,6 +1,7 @@
 import { HomeStart } from '@/sections/HomeStart/HomeStart';
 import { HomeOffer } from '@/sections/HomeOffer/HomeOffer';
 import { HomePlots } from '@/sections/HomePlots/HomePlots';
+import { HomeVideo } from '@/sections/HomeVideo/HomeVideo';
 
 export default function Home() {
 	return (
@@ -8,6 +9,7 @@ export default function Home() {
 			<HomeStart />
 			<HomeOffer/>
 			<HomePlots/>
+			<HomeVideo/>
 		</>
 	);
 }

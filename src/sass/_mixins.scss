@@ -42,3 +42,7 @@
 		scale: 0.97;
 	}
 }
+
+@mixin bgGradient{
+	background: linear-gradient(to top right, $green, #275e29);
+}
