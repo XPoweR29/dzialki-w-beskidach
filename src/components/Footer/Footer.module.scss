@@ -1,0 +1,14 @@
+@use '../../sass/common' as *;
+
+.footer {
+    height: 100vh;
+    background-color: $footer-dark;
+    margin-top: -40px;
+    z-index: -1;
+}
+
+@media (width >= 768px) {
+    .footer {
+        margin-top: -60px;
+    }
+}

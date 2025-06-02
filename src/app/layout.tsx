@@ -3,6 +3,7 @@ import { Barlow_Condensed, Montserrat } from 'next/font/google';
 import '../sass/globals.scss';
 import { ContextProvider } from '../contexts/app.context';
 import { Header } from '@/components/Header/Header';
+import { Footer } from '@/components/Footer/Footer';
 
 const mainFont = Montserrat({
 	subsets: ['latin'],
@@ -32,6 +33,7 @@ export default function RootLayout({
 				<ContextProvider>
 					<Header/>
 					{children}
+					<Footer/>
 				</ContextProvider>
 			</body>
 		</html>

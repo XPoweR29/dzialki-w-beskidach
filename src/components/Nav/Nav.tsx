@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { menuLinks } from '@/assets/data/navLinks';
 import Image from 'next/image';
 import iconPhone from '../../assets/icons/icon_phone.svg';
-import { nav } from 'motion/react-client';
 
 export const LinkBar = () => {
 	return (
@@ -20,7 +19,7 @@ export const LinkBar = () => {
 				))}
 				<li>
 					<a
-						href='tel:504058507'
+						href='tel:+48504058507'
 						className={styles.phoneButton}
 						aria-label='Zadzwoń pod numer 504 058 507'>
 						<Image src={iconPhone} alt='' aria-hidden draggable={false} />

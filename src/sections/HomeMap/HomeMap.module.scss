@@ -1,0 +1,153 @@
+@use '../../sass/common' as *;
+
+.section {
+	position: relative;
+	padding: 8em 0;
+	border-radius: 0px 0px 40px 40px;
+	overflow: clip;
+	background-color: $white;
+	z-index: 1;
+
+	.container {
+		position: absolute;
+		right: 0;
+		width: 90%;
+		padding: 2em;
+		color: $white;
+		border-radius: 50px 0px 0px 50px;
+		@include bgGradient;
+
+		@include shadow;
+	}
+
+	.heading {
+		@include sectionHeading;
+		text-align: start;
+	}
+
+	.text {
+		@include text;
+		margin-top: 2em;
+
+		.link {
+			position: relative;
+			font-weight: 900;
+			letter-spacing: 1px;
+			text-shadow: 0px 0px 5px $light-green;
+			white-space: nowrap;
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -2px;
+				left: 0;
+				height: 2px;
+				width: 100%;
+				border-radius: 5px;
+				background-color: $light-green;
+			}
+		}
+	}
+
+	.phoneButton {
+		@include mainButton;
+		margin-top: 4em;
+		gap: 0.5em;
+		color: $green;
+		background-color: $white;
+		@include shadow;
+		box-shadow: 0px 0px 10px rgba(255, 255, 255, 0);
+		transition: background-color 0.3s, scale 0.3s, box-shadow 0.3s;
+
+		&:hover {
+			color: $green;
+			background-color: $white;
+			box-shadow: 0px 0px 10px $white;
+		}
+
+		.icon {
+			font-size: 1.6em;
+		}
+	}
+
+	.questionImg {
+		position: absolute;
+		bottom: 1em;
+		right: -1.5em;
+		width: 150px;
+	}
+
+	.map {
+		width: 100%;
+		margin-top: 34em;
+		border: none;
+		@include shadow;
+	}
+}
+
+@media (width >=768px) {
+	.section {
+		border-radius: 0px 0px 60px 60px;
+
+		.container {
+			width: 80%;
+		}
+	}
+}
+
+@media (width >=992px) {
+	.section {
+		padding-bottom: 10em;
+
+		.wrapper {
+			display: flex;
+			justify-content: start;
+			align-items: center;
+		}
+
+		.container {
+			width: 50%;
+		}
+
+		.map {
+			width: 45%;
+			margin-top: 0;
+			height: auto;
+			aspect-ratio: 1/1;
+			border-radius: 30px;
+		}
+	}
+}
+
+@media (width >=1200px) {
+	.section {
+		.container {
+			width: 45%;
+		}
+
+		.map {
+			aspect-ratio: 1/0.8;
+		}
+	}
+}
+
+@media (width >=1400px) {
+	.section {
+
+		.container {
+			width: 30%;
+			padding: 4em;
+			order: 2;
+		}
+
+		.questionImg {
+			bottom: 0;
+			right: 0;
+		}
+
+		.map {
+			width: 60%;
+			aspect-ratio: 1/0.55;
+		}
+	}
+}
