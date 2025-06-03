@@ -1,14 +1,119 @@
 @use '../../sass/common' as *;
 
 .footer {
-    height: 100vh;
-    background-color: $footer-dark;
-    margin-top: -40px;
-    z-index: -1;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+	gap: 5em;
+	margin-top: -40px;
+	padding-top: 150px;
+	padding-bottom: 2em;
+	background-color: $footer-dark;
+	color: rgba(255, 255, 255, 0.7);
+	z-index: -1;
+
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+		align-items: center;
+		gap: 5em;
+	}
+
+	.col1,
+	.col2,
+	.col3 {
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		text-align: center;
+	}
+
+	.col1 p {
+		max-width: 385px;
+	}
+
+	.col2 {
+		align-items: start;
+		gap: 2em;
+	}
+
+	a {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.5em;
+		color: rgba(255, 255, 255, 0.7);
+		font-style: normal;
+		transition: color 0.2s;
+
+		svg {
+			font-size: 1.3em;
+		}
+
+		&:hover {
+			color: white;
+		}
+	}
+
+	.copyright {
+		display: flex;
+		flex-direction: column;
+		margin-top: 2em;
+	}
+
+	.dev_sign {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 0.6em;
+		font-size: 0.8em;
+		opacity: 0.2;
+
+		img {
+			width: 70px;
+		}
+	}
 }
 
 @media (width >= 768px) {
-    .footer {
-        margin-top: -60px;
-    }
+	.footer {
+		margin-top: -60px;
+		padding-top: 170px;
+	}
+}
+
+@media (width >= 992px) {
+	.footer {
+		padding-top: 250px;
+		gap: 7em;
+
+		.wrapper {
+			flex-direction: row;
+		}
+
+		.col1,
+		.col2,
+		.col3 {
+			width: 30%;
+		}
+
+		.col1 {
+			gap: 2em;
+		}
+
+		.col2 {
+			order: 3;
+		}
+	}
+}
+
+@media (width >= 992px) {
+	.footer {
+		.logo img {
+			width: 300px;
+		}
+	}
 }

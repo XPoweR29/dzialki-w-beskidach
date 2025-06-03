@@ -13,7 +13,7 @@ export const HomeOffer = () => {
 	const { breakpoint } = useBreakpoints();
 
 	return (
-		<section className={styles.section}>
+		<section className={styles.section} id='oferta'>
 			<Wrapper className={styles.wrapper}>
 				<div className={styles.container}>
 					<h2 className={styles.heading}>Atrakcyjne działki na sprzedaż</h2>

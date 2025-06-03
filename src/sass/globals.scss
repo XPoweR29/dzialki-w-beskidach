@@ -2,10 +2,15 @@
 @use './hamburger';
 @use './common' as *;
 
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	min-width: 350px;
 	font-size: 1.4rem;
 	color: $black;
+	background-color: $white;
 
 	h1,
 	h2,

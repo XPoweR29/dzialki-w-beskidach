@@ -10,6 +10,7 @@ import { Map } from '@/components/Map/Map';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { TextContainer } from '@/components/TextContainer/TextContainer';
 import { useBreakpoints } from '@/hooks/useBreakpoint';
+import { motion } from 'motion/react';
 
 export const HomeMap = () => {
 	const { breakpoint } = useBreakpoints();
@@ -17,7 +18,14 @@ export const HomeMap = () => {
 	return (
 		<section className={styles.section}>
 			<Wrapper className={styles.wrapper}>
-				<div className={styles.container}>
+
+				<motion.div 
+					className={styles.container}
+					initial={{opacity: 0, x:100}}
+					whileInView={{opacity: 1, x:0}}
+					transition={{duration: 1}}
+					viewport={{amount: 0.4, once: true}}
+				>
 					<h2 className={styles.heading}>Masz pytania?</h2>
 					<TextContainer className={styles.text}>
 						<p>Na mapie możesz łatwo sprawdzić, gdzie znajdują się działki.</p>
@@ -46,7 +54,8 @@ export const HomeMap = () => {
 						draggable={false}
 						aria-hidden
 					/>
-				</div>
+				</motion.div>
+
 			{breakpoint.lg && <Map className={styles.map} />}
 			</Wrapper>
 

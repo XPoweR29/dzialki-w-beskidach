@@ -29,24 +29,24 @@ export const HomeStart = () => {
 			className={styles.section}
 			ref={heroRef}
 			style={{ backgroundPositionY: `${startHeroPosition}` }}>
-				<Wrapper className={styles.wrapper}>
-					<h1>Działka na sprzedaż w Beskidzie Żywieckim</h1>
-					<h2>
-						Wybierz swoją działkę <br /> z widokiem na góry
-					</h2>
+			<Wrapper className={styles.wrapper}>
+				<h1>Działka na sprzedaż w Beskidzie Żywieckim</h1>
+				<h2>
+					Wybierz swoją działkę <br /> z widokiem na góry
+				</h2>
 
-					<Link href='/#oferta' className={styles.ctaBtn}>
-						Zobacz ofertę
-					</Link>
+				<Link href='/#dzialki' className={styles.ctaBtn}>
+					Zobacz ofertę
+				</Link>
 
-					<Link href='/#oferta' className={styles.socialBtn}>
-						<Image
-							src={iconFb}
-							alt='Śledź nas na Facebooku'
-							draggable={false}
-						/>
-					</Link>
-				</Wrapper>
+				<a
+					href='https://facebook.pl'
+					className={styles.socialBtn}
+					target='_blank'
+					rel='noopener noreferrer'>
+					<Image src={iconFb} alt='Śledź nas na Facebooku' draggable={false} />
+				</a>
+			</Wrapper>
 		</section>
 	);
 };
