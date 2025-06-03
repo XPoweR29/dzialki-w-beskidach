@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './PlotCard.module.scss';
-import { article } from 'motion/react-client';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import { Icon } from '@iconify/react';
 import Link from 'next/link';
 
