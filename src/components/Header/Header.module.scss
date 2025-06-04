@@ -9,10 +9,10 @@
 	padding: 0.5em 0;
 	@include shadow;
 	transform: translateX(-50%);
-	z-index: 100;
 	border-radius: 10px;
 	background-color: white;
 	transition: height 0.5s, transform 0.7s;
+	z-index: 90;
 
 	&.activeMobileMenu {
 		height: 90%;

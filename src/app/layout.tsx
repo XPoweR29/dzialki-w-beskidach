@@ -31,9 +31,9 @@ export default function RootLayout({
 		<html lang='pl' className={`${mainFont.variable} ${headingFont.variable}`}>
 			<body className={mainFont.className}>
 				<ContextProvider>
-					<Header/>
+					<Header />
 					{children}
-					<Footer/>
+					<Footer />
 				</ContextProvider>
 			</body>
 		</html>

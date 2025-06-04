@@ -1,10 +1,12 @@
-"use client"
+'use client';
 
 import React, { ReactNode, createContext, useEffect, useState } from 'react';
 
 export const AppContext = createContext<AppContextType | null>(null);
 
 export const ContextProvider = ({ children }: { children: ReactNode }) => {
+	const [isPreviewOpen, setIsPreviewOpen] = useState<boolean>(false);
+	const [galleryIndex, setGalleryIndex] = useState<number>(0);
 	const [mobileMenuShown, setMobileMenuShown] = useState(false);
 	const [breakpoint, setBreakpoint] = useState<Breakpoints>({
 		sm: false,
@@ -37,6 +39,10 @@ export const ContextProvider = ({ children }: { children: ReactNode }) => {
 		breakpoint,
 		mobileMenuShown,
 		setMobileMenuShown,
+		galleryIndex,
+		setGalleryIndex,
+		isPreviewOpen,
+		setIsPreviewOpen
 	};
 
 	return (
