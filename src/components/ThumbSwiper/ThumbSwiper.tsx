@@ -8,6 +8,7 @@ import 'swiper/css';
 import Image, { StaticImageData } from 'next/image';
 import { useGallery } from '@/hooks/useGallery';
 import { SwiperButtons } from '../SwiperButtons/SwiperButtons';
+import { Space_Grotesk } from 'next/font/google';
 
 interface Props {
 	slides: string[] | StaticImageData[];
@@ -21,7 +22,7 @@ export const ThumbSwiper = ({ slides }: Props) => {
 		<div className={styles.container}>
 			<Swiper
 				className={styles.thumbSwiper}
-				spaceBetween={20}
+				spaceBetween={10}
 				slidesPerView={3}
 				onSwiper={(swiper) => swiperRef.current = swiper }>
 				{slides.map((url, i) => (

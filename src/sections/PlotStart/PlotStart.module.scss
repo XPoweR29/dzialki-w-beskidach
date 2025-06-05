@@ -3,7 +3,7 @@
 .section {
 	position: relative;
 	padding-top: 7em;
-	height: calc(60svh + 40px);
+	height: calc(80svh + 40px);
 	background-image: url('/photos/hero_photo.jpg');
 	background-size: cover;
 	background-position: center;
@@ -30,6 +30,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: start;
+		padding-bottom: 40px;
 		color: $white;
 	}
 
@@ -80,7 +81,7 @@
 
 @media (width >= 768px) {
 	.section {
-		height: calc(60svh + 60px);
+		height: calc(80svh + 60px);
 
 		h1 {
 			margin-bottom: 2.5em;

@@ -48,7 +48,7 @@ export const Header = () => {
 			{`${styles.header} ${mobileMenuShown ? styles['activeMobileMenu'] : ''} ${!showNav ? styles['header--hidden']:''}`}
 			>
 			<div className={styles.navbar_container}>
-				<Link href={'/'} className={styles.logo} onClick={handleClick}>
+				<Link href={'/'} className={styles.logo} onClick={handleClick} rel='preload'>
 					<Image
 						src={'/logo.png'}
 						width={250}

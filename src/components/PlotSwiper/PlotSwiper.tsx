@@ -4,42 +4,18 @@ import { Swiper, SwiperClass, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import { PlotCard } from '../PlotCard/PlotCard';
 
-import cardImg from '../../assets/photos/dzialka1/card_image.jpg';
-
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import { SwiperButtons } from '../SwiperButtons/SwiperButtons';
-
-const plots: PlotCard[] = [
-	{
-		cardImg: cardImg,
-		title: 'Działka #1',
-		surface: '14,2 a',
-		destination: 'budowlana',
-		location: 'Pewel Ślemieńska',
-		pageSlug: 'dzialka-1',
-	},
-	{
-		cardImg: cardImg,
-		title: 'Działka #2',
-		surface: '14,2 a',
-		destination: 'budowlana',
-		location: 'Pewel Ślemieńska',
-		pageSlug: 'dzialka-2',
-	},
-	{
-		cardImg: cardImg,
-		title: 'Działka #3',
-		surface: '14,2 a',
-		destination: 'budowlana',
-		location: 'Pewel Ślemieńska',
-		pageSlug: 'dzialka-3',
-	},
-];
+import { offers } from '@/assets/data/offers';
+import { usePathname } from 'next/navigation';
 
 export const PlotSwiper = () => {
+	const pathname = usePathname();
+	const currentSlug = pathname.split('/')[1];
 	const swiperRef = useRef<SwiperClass | null>(null);
+	const plots = offers.filter((plot) => plot.pageSlug !== currentSlug)
 
 	return (
 		<>
@@ -50,7 +26,7 @@ export const PlotSwiper = () => {
 				breakpoints={
 					{
 						768: { slidesPerView: 2, spaceBetween: 50 },
-						992: { slidesPerView: 3, spaceBetween: 40 },
+						992: { slidesPerView: 3, spaceBetween: 'auto' },
 					}
 				}
 				modules={[Navigation]}

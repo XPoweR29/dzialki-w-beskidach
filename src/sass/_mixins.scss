@@ -43,6 +43,6 @@
 	}
 }
 
-@mixin bgGradient{
-	background: linear-gradient(to top right, $green, #275e29);
+@mixin bgGradient($direction: to top right){
+	background: linear-gradient($direction, $green, #275e29);
 }

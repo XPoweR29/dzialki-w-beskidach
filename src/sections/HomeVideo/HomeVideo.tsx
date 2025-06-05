@@ -1,11 +1,17 @@
+'use client';
+
 import React from 'react';
 import styles from './HomeVideo.module.scss';
 import { Wrapper } from '@/components/Wrapper/Wrapper';
 import { Icon } from '@iconify/react';
 import Image from 'next/image';
-import forestImg from '../../assets/images/forest.png';
+import forest_s from '../../assets/images/forest.png';
+import forest_xl from '../../assets/images/forest_large.png';
+import { useBreakpoints } from '@/hooks/useBreakpoint';
 
 export const HomeVideo = () => {
+	const { breakpoint } = useBreakpoints();
+
 	return (
 		<section className={styles.section}>
 			<Wrapper className={styles.wrapper}>
@@ -22,7 +28,7 @@ export const HomeVideo = () => {
 			</Wrapper>
 
 			<Image
-				src={forestImg}
+				src={breakpoint.lg?forest_xl:forest_s}
 				className={styles.image}
 				alt=''
 				draggable={false}

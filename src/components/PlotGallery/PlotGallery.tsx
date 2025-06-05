@@ -1,21 +1,20 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import styles from './PlotGallery.module.scss';
 import Image, { StaticImageData } from 'next/image';
 import { ThumbSwiper } from '../ThumbSwiper/ThumbSwiper';
 import { useGallery } from '@/hooks/useGallery';
 import { Icon } from '@iconify/react/dist/iconify.js';
-import { useAppContext } from '@/hooks/useAppContext';
-import { PhotoPreview } from '../PhotoPreview/PhotoPreview';
-import { createPortal } from 'react-dom';
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 
 interface Props {
 	slides: string[] | StaticImageData[];
 }
 
 export const PlotGallery: React.FC<Props> = ({ slides }) => {
-	const { galleryIndex, isPreviewOpen, openPreview } = useGallery();
+	const { galleryIndex, setGalleryIndex, isPreviewOpen, openPreview, closePreview } = useGallery();
 
 	return (
 		<div className={styles.gallery}>
@@ -30,8 +29,15 @@ export const PlotGallery: React.FC<Props> = ({ slides }) => {
 			</div>
 
 			<ThumbSwiper slides={slides} />
-
-			{isPreviewOpen && createPortal(<PhotoPreview slides={slides}/>, document.body)}
+			
+			<Lightbox
+				open={isPreviewOpen}
+				close={closePreview}
+				index={galleryIndex ?? 0}
+				slides={slides.map((img) => ({
+					src: typeof img === 'string' ? img : img.src,
+				}))}
+			/>
 		</div>
 	);
 };

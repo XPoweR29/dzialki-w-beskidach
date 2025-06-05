@@ -27,6 +27,7 @@ export const Footer = () => {
 					<Link
 						href={'/'}
 						className={styles.logo}
+						rel='preload'
 						onClick={handleClick}
 						aria-label='Przejdź do strony głównej'>
 						<Image
@@ -34,7 +35,7 @@ export const Footer = () => {
 							width={250}
 							height={52}
 							alt='Działki na sprzedaż w Beskidzie Żywieckim'
-							priority
+							priority={true}
 						/>
 					</Link>
 					<p>
