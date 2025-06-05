@@ -11,6 +11,7 @@ import img5 from '../../assets/photos/plot1_gallery/photo_2.jpg';
 import img6 from '../../assets/photos/plot1_gallery/photo_3.jpg';
 import { PlotDescription } from '@/sections/PlotDescription/PlotDescription';
 import { PlotOther } from '@/sections/PlotsOther/PlotOther';
+import { PlotContact } from '@/sections/PlotContact/PlotContact';
 
 const GALLERY: string[] | StaticImageData[] = [
 	img1,
@@ -58,6 +59,8 @@ const page = () => {
 				heading={<h2>Zobacz pozostałe działki</h2>}
 				text='Każda z nich to świetna lokalizacja z widokiem na góry. Zobacz, która działka najlepiej spełnia Twoje oczekiwania.'
 			/>
+
+			<PlotContact/>
 		</>
 	);
 };

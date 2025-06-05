@@ -4,6 +4,7 @@ import '../sass/globals.scss';
 import { ContextProvider } from '../contexts/app.context';
 import { Header } from '@/components/Header/Header';
 import { Footer } from '@/components/Footer/Footer';
+import { Toaster } from 'react-hot-toast';
 
 const mainFont = Montserrat({
 	subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function RootLayout({
 					<Header />
 					{children}
 					<Footer />
+					<Toaster/>
 				</ContextProvider>
 			</body>
 		</html>

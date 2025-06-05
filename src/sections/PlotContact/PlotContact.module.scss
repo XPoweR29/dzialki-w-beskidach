@@ -1,0 +1,87 @@
+@use '../../sass/common' as *;
+
+.section {
+	position: relative;
+	padding: 5em 0;
+	padding-top: 2em;
+	background-color: white;
+	border-radius: 0px 0px 40px 40px;
+	overflow: clip;
+	z-index: 1;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 40%;
+		left: 0;
+		height: 60%;
+		width: 100%;
+		@include bgGradient();
+		z-index: -1;
+	}
+
+	.formContainer {
+		width: fit-content;
+		margin: 0 auto;
+		padding: 3em 1em;
+		background-color: white;
+		border: 1px solid rgba(255, 255, 255, 0.3);
+		border-radius: 30px;
+		@include shadow;
+	}
+}
+
+@media (width>=768px) {
+	.section {
+		border-radius: 0px 0px 60px 60px;
+	}
+}
+
+@media (width >= 992px) {
+	.section {
+		.formContainer {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+			width: 100%;
+		}
+
+		.form {
+			width: 47%;
+		}
+
+		.map {
+			width: 47%;
+			height: auto;
+			align-self: center;
+			aspect-ratio: 1/1.2;
+			border: none;
+			border-radius: 30px;
+			@include shadow;
+		}
+	}
+}
+
+@media (width >= 1200px) {
+	.section {
+		.formContainer {
+			justify-content: space-around;
+		}
+
+		.form {
+			width: 40%;
+			max-width: 430px;
+		}
+
+		.map {
+			width: 47%;
+			max-width: 510px;
+			height: auto;
+			align-self: center;
+			aspect-ratio: 1/1;
+			border: none;
+			border-radius: 30px;
+			@include shadow;
+		}
+	}
+}

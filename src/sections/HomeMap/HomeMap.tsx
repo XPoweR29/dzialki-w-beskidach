@@ -21,9 +21,9 @@ export const HomeMap = () => {
 
 				<motion.div 
 					className={styles.container}
-					initial={{opacity: 0, x:100}}
+					initial={{opacity: 0, x:40}}
 					whileInView={{opacity: 1, x:0}}
-					transition={{duration: 1}}
+					transition={{duration: 0.5}}
 					viewport={{amount: 0.4, once: true}}
 				>
 					<h2 className={styles.heading}>Masz pytania?</h2>

@@ -2,12 +2,12 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { useBreakpoints } from '@/hooks/useBreakpoint';
 
-export const Map = ({ className }: {className?: string}) => {
+export const Map = ({ className, anime=true }: {className?: string, anime?: boolean;}) => {
 	const { breakpoint } = useBreakpoints();
-	const animationProps = breakpoint.lg?{
-			initial: {opacity: 0, x: -100},
+	const animationProps = breakpoint.lg && anime?{
+			initial: {opacity: 0, x: -40},
 			whileInView: {opacity: 1, x:0},
-			transition: {duration: 1},
+			transition: {duration: 0.5},
 			viewport: {amount: 0.4, once: true}
 	}: {};
 

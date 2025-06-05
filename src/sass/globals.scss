@@ -18,6 +18,15 @@ body {
 	h4 {
 		font-family: var(--font-barlow);
 	}
+
+	.toaster {
+		border: 2px solid $green;
+		@include shadow;
+
+		.go2344853693 {
+			background-color: $green;
+		}
+	}
 	
 	@media (min-width: 400px) {
 		font-size: 1.6rem;
