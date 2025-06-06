@@ -1,0 +1,30 @@
+@use '../../sass/common' as *;
+
+.section {
+	position: relative;
+	margin-top: -40px;
+	padding: 5em 0;
+	background-color: white;
+	border-radius: 40px;
+	overflow: hidden;
+	z-index: 2;
+
+	.heading {
+		@include sectionHeading;
+		text-align: left;
+	}
+
+	.text {
+		@include text;
+		max-width: 930px;
+		margin-top: 2em;
+	}
+}
+
+@media (width >= 768px) {
+	.section {
+		margin-top: -60px;
+		padding-top: 7em;
+		border-radius: 60px;
+	}
+}

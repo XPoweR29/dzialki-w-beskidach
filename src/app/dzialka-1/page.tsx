@@ -25,7 +25,14 @@ const GALLERY: string[] | StaticImageData[] = [
 const page = () => {
 	return (
 		<>
-			<PlotStart />
+			<PlotStart
+				title='Działka #1'
+				heading={
+					<>
+						Działka pod lasem <br /> w Beskidach
+					</>
+				}
+			/>
 			<PlotOffer gallery={GALLERY} />
 			<PlotDescription>
 				<p>
@@ -60,7 +67,7 @@ const page = () => {
 				text='Każda z nich to świetna lokalizacja z widokiem na góry. Zobacz, która działka najlepiej spełnia Twoje oczekiwania.'
 			/>
 
-			<PlotContact/>
+			<PlotContact />
 		</>
 	);
 };

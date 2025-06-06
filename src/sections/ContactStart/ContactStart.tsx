@@ -1,14 +1,11 @@
 'use client';
 
 import React, { useEffect, useRef } from 'react';
-import styles from './PlotStart.module.scss';
+import styles from './ContactStart.module.scss';
 import { Wrapper } from '@/components/Wrapper/Wrapper';
 
-interface Props {
-	title?: string;
-	heading: React.ReactNode | string;
-}
-export const PlotStart = ({title, heading}: Props) => {
+
+export const ContactStart = () => {
 	const heroRef = useRef<HTMLDivElement | null>(null);
 
 	const startHeroPosition = `10%`;
@@ -31,8 +28,7 @@ export const PlotStart = ({title, heading}: Props) => {
 			ref={heroRef}
 			style={{ backgroundPositionY: `${startHeroPosition}` }}>
 			<Wrapper className={styles.wrapper}>
-				<h1>{title}</h1>
-				<h2>{heading}</h2>
+				<h1>Skontaktuj się z nami</h1>
 			</Wrapper>
 		</section>
 	);

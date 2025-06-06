@@ -1,0 +1,116 @@
+@use '../../sass/common' as *;
+
+.section {
+	position: relative;
+	padding-top: 4em;
+	margin-top: 3em;
+
+	&::after {
+		content: '';
+		position: absolute;
+		height: 70%;
+		width: 100%;
+		top: 0%;
+		left: 0;
+		@include bgGradient;
+		z-index: -1;
+	}
+
+	.napContainer {
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		width: fit-content;
+		gap: 3em;
+		list-style: none;
+		font-style: normal;
+		color: white;
+	}
+
+	.napItem {
+		padding: 0.5em;
+		border-radius: 7px;
+		background-color: transparent;
+		transition: background-color 0.1s;
+
+		a {
+			display: flex;
+			align-items: flex-start;
+			gap: 1em;
+		}
+
+		.icon {
+			width: 60px;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			gap: 0.7em;
+
+			span {
+				font-weight: 600;
+				font-size: 1.2em;
+			}
+
+			p {
+				font-size: 0.85em;
+				opacity: 0.9;
+			}
+		}
+
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.2);
+		}
+	}
+
+	.formContainer {
+		width: fit-content;
+		margin: 0 auto;
+		margin-top: 7em;
+		padding: 3em 1em;
+		background-color: white;
+		border: 2px solid rgba(1, 61, 35, 0.7);
+		border-radius: 30px;
+		@include shadow;
+	}
+}
+
+@media (width >= 992px) {
+	.section {
+		padding-top: 0;
+
+		&::after {
+			top: 50%;
+			height: 65%;
+			transform: translateY(-50%);
+		}
+
+		.wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.formContainer {
+			margin: 0;
+			width: 450px;
+		}
+	}
+}
+
+@media (width >= 1200px) {
+	.section {
+		.wrapper {
+			justify-content: space-around;
+		}
+	}
+}
+
+@media (width >= 1400px) {
+	.section {
+		.formContainer {
+			width: 500px;
+		}
+	}
+}
