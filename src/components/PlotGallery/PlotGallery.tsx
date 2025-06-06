@@ -14,7 +14,7 @@ interface Props {
 }
 
 export const PlotGallery: React.FC<Props> = ({ slides }) => {
-	const { galleryIndex, setGalleryIndex, isPreviewOpen, openPreview, closePreview } = useGallery();
+	const { galleryIndex, isPreviewOpen, openPreview, closePreview } = useGallery();
 
 	return (
 		<div className={styles.gallery}>
