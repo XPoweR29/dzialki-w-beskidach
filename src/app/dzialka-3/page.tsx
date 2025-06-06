@@ -23,7 +23,7 @@ const GALLERY: string[] | StaticImageData[] = [
 ];
 
 const PLOT_DETAIL: PlotDetails = {
-	price: 119000,
+	price: 115000,
 	location: 'Pewel Ślemieńska',
 	streetAddress: 'Przykładowa 1',
 	surface: 1100,
@@ -38,10 +38,10 @@ const page = () => {
 	return (
 		<>
 			<PlotStart
-				title='Działka #1'
+				title='Działka #3'
 				heading={
 					<>
-						Działka pod lasem <br /> w Beskidach
+						Atrakcyjne miejsce <br /> w Beskidzie Żywieckim
 					</>
 				}
 			/>
