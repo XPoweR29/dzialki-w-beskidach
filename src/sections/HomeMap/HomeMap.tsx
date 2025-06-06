@@ -16,7 +16,7 @@ export const HomeMap = () => {
 	const { breakpoint } = useBreakpoints();
 
 	return (
-		<section className={styles.section}>
+		<section className={styles.section} id='lokalizacja'>
 			<Wrapper className={styles.wrapper}>
 
 				<motion.div 

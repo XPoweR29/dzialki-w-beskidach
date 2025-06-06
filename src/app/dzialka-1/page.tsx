@@ -22,6 +22,18 @@ const GALLERY: string[] | StaticImageData[] = [
 	img6,
 ];
 
+const PLOT_DETAIL: PlotDetails = {
+	price: 119000,
+	location: 'Pewel Ślenieńska',
+	streetAddress: 'Przykładowa 1',
+	surface: 1100,
+	dimensions: '25 x 44',
+	destination: 'budowlana',
+	plotNumber: '123/2', 
+	approach: 'droga utwardzona',
+	media: 'prąd'
+}
+
 const page = () => {
 	return (
 		<>
@@ -33,7 +45,9 @@ const page = () => {
 					</>
 				}
 			/>
-			<PlotOffer gallery={GALLERY} />
+
+			<PlotOffer gallery={GALLERY}  details={PLOT_DETAIL}/>
+
 			<PlotDescription>
 				<p>
 					Ut enim ad minim veniam, quis nostrum exercitationem ullam corporis

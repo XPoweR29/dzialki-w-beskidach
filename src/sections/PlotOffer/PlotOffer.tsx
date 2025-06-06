@@ -12,9 +12,12 @@ import { useBreakpoints } from '@/hooks/useBreakpoint';
 
 interface Props {
 	gallery: string[] | StaticImageData[];
+	details: PlotDetails;
 }
-export const PlotOffer = ({ gallery }: Props) => {
+export const PlotOffer = ({ gallery, details }: Props) => {
 	const { breakpoint } = useBreakpoints();
+
+	const pricePerM2 = Math.round(details.price/details.surface)
 
 	return (
 		<section className={styles.section}>
@@ -29,18 +32,18 @@ export const PlotOffer = ({ gallery }: Props) => {
 				<div className={styles.plotInfo}>
 					<div className={styles.header}>
 						<div className={styles.container}>
-							<p className={styles.price}>123 000 zł</p>
-							<span>999 zł/m²</span>
+							<p className={styles.price}>{`${details.price.toLocaleString()} zł`}</p>
+							<span>{`${pricePerM2} zł/m²`}</span>
 						</div>
 						<div className={styles.location}>
 							<Icon icon='mdi:location' className={styles.icon} />
-							<span>Pewel Ślemieńska, ul.Przykładowa 1</span>
+							<span>{`${details.location}${details.streetAddress?`, ul. ${details.streetAddress}`:''}`}</span>
 						</div>
 					</div>
 
 					{!breakpoint.lg && <PlotGallery slides={gallery} />}
 
-					<Parameters className={styles.parameters} />
+					<Parameters className={styles.parameters}  details={details}/>
 
 					<a
 						href='tel:+48504058507'
