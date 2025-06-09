@@ -8,6 +8,7 @@ import Image from 'next/image';
 import forest_s from '../../assets/images/forest.png';
 import forest_xl from '../../assets/images/forest_large.png';
 import { useBreakpoints } from '@/hooks/useBreakpoint';
+import { VideoPlayer } from '@/components/VideoPlayer/VideoPlayer';
 
 export const HomeVideo = () => {
 	const { breakpoint } = useBreakpoints();
@@ -15,9 +16,14 @@ export const HomeVideo = () => {
 	return (
 		<section className={styles.section}>
 			<Wrapper className={styles.wrapper}>
-				<div className={styles.videoContainer}>
+				{/* <div className={styles.videoContainer}>
 					<Icon className={styles.icon} icon='octicon:play-24' />
-				</div>
+				</div> */}
+
+				<VideoPlayer
+					src='/dron_video.mp4'
+					poster='/photos/hero_photo.jpg'
+				/>
 
 				<h2 className={styles.heading}>Zobacz okolicę z lepszej perspektywy</h2>
 				<p className={styles.text}>

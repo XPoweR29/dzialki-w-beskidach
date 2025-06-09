@@ -1,0 +1,56 @@
+@use '../../sass/common' as *;
+
+.container {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 300px;
+	transform: translateY(-50%);
+	border-radius: 50px;
+	background-color: black;
+	border: 1px solid $white;
+	overflow: hidden;
+	@include shadow;
+
+	.video {
+		width: 100%;
+
+		&::-webkit-media-controls-overlay-play-button {
+			opacity: 0 !important;
+		}
+	}
+
+	.overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		cursor: pointer;
+
+		.icon {
+			font-size: 5em;
+			opacity: 0.8;
+		}
+	}
+}
+
+@media (width>= 768px) {
+	.container {
+		height: 400px;
+	}
+}
+
+@media (width>= 992px) {
+	.container {
+		height: auto;
+		max-width: 928px;
+		margin: 0 auto;
+		aspect-ratio: 1/0.565;
+	}
+}
