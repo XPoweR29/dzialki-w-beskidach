@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import dev_logo from '../../assets/dev_logo.svg';
+import logo from '../../assets/images/logo_white.png';
 
 export const Footer = () => {
 	const pathname = usePathname();
@@ -31,7 +32,7 @@ export const Footer = () => {
 						onClick={handleClick}
 						aria-label='Przejdź do strony głównej'>
 						<Image
-							src={'/logo_white.png'}
+							src={logo}
 							width={250}
 							height={52}
 							alt='Działki na sprzedaż w Beskidzie Żywieckim'

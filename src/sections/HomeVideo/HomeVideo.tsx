@@ -3,7 +3,6 @@
 import React from 'react';
 import styles from './HomeVideo.module.scss';
 import { Wrapper } from '@/components/Wrapper/Wrapper';
-import { Icon } from '@iconify/react';
 import Image from 'next/image';
 import forest_s from '../../assets/images/forest.png';
 import forest_xl from '../../assets/images/forest_large.png';
@@ -16,12 +15,9 @@ export const HomeVideo = () => {
 	return (
 		<section className={styles.section}>
 			<Wrapper className={styles.wrapper}>
-				{/* <div className={styles.videoContainer}>
-					<Icon className={styles.icon} icon='octicon:play-24' />
-				</div> */}
 
 				<VideoPlayer
-					src='/dron_video.mp4'
+					src='/video/dron_video.mp4'
 					poster='/photos/hero_photo.jpg'
 				/>
 

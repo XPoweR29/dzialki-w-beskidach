@@ -10,6 +10,7 @@ import { useAppContext } from '@/hooks/useAppContext';
 import { MobileMenu } from '../MobileMenu/MobileMenu';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import logo from '../../assets/images/logo.png';
 
 export const Header = () => {
 	const { breakpoint } = useBreakpoints();
@@ -50,7 +51,7 @@ export const Header = () => {
 			<div className={styles.navbar_container}>
 				<Link href={'/'} className={styles.logo} onClick={handleClick} rel='preload'>
 					<Image
-						src={'/logo.png'}
+						src={logo}
 						width={250}
 						height={52}
 						alt='Działki na sprzedaż w Beskidzie Żywieckim'
