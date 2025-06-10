@@ -11,6 +11,7 @@ export const PlotCard = ({cardImg, title, surface, destination, location, pageSl
 			<Image
                 className={styles.photo}
 				src={cardImg}
+				priority
 				alt='Działka pod lasem w beskidzie żywieckim'
 				draggable={false}
 			/>

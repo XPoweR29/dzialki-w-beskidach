@@ -1,19 +1,26 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './HomeStart.module.scss';
 import { Wrapper } from '@/components/Wrapper/Wrapper';
 import Link from 'next/link';
 import iconFb from '../../assets/icons/icon_facebook.svg';
 import Image from 'next/image';
+import Loading from '@/app/loading';
 
 export const HomeStart = () => {
 	const heroRef = useRef<HTMLDivElement | null>(null);
+	const [bgLoaded, setBgLoaded] = useState(false);
 
 	const startHeroPosition = `10%`;
 
 	useEffect(() => {
+		const bgImage = new window.Image();
+		bgImage.src = '/photos/hero_photo.jpg';
+		bgImage.onload = () => setBgLoaded(true);
+
 		function handleScroll() {
+			if (!heroRef.current) null
 			const offset = window.scrollY;
 			heroRef.current!.style.backgroundPositionY = `calc(${startHeroPosition} + ${
 				offset * 0.5
@@ -23,6 +30,8 @@ export const HomeStart = () => {
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
+
+	if(!bgLoaded) return <Loading/>
 
 	return (
 		<section
