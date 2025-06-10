@@ -1,6 +1,25 @@
 import React from 'react';
 import styles from './polityka-ptywatnosci.module.scss';
 import { Wrapper } from '@/components/Wrapper/Wrapper';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Polityka Prywatności | Działki w Beskidzie Żywieckim',
+	description:
+		'Dowiedz się, jakie dane zbieramy i w jaki sposób je przetwarzamy. Polityka prywatności serwisu Działki w Beskidzie Żywieckim.',
+	alternates: {
+		canonical: 'https://dzialkiwbeskidziezywieckim.pl/polityka-prywatnosci',
+	},
+	openGraph: {
+		title: 'Polityka Prywatności | Działki w Beskidzie Żywieckim',
+		description:
+			'Dowiedz się, jakie dane zbieramy i w jaki sposób je przetwarzamy. Polityka prywatności serwisu Działki w Beskidzie Żywieckim.',
+		url: 'https://dzialkiwbeskidziezywieckim.pl/polityka-prywatnosci',
+		siteName: 'Działki w Beskidzie Żywieckim',
+		type: 'website',
+		locale: 'pl_PL',
+	},
+};
 
 const PrivacyPolicy = () => {
 	return (
