@@ -7,18 +7,15 @@ import Link from 'next/link';
 import iconFb from '../../assets/icons/icon_facebook.svg';
 import Image from 'next/image';
 import Loading from '@/app/loading';
+import { useImagePreload } from '@/hooks/useImagePreload';
 
 export const HomeStart = () => {
 	const heroRef = useRef<HTMLDivElement | null>(null);
-	const [bgLoaded, setBgLoaded] = useState(false);
+	const bgLoaded = useImagePreload('/photos/hero_photo.jpg');
 
 	const startHeroPosition = `10%`;
 
 	useEffect(() => {
-		const bgImage = new window.Image();
-		bgImage.src = '/photos/hero_photo.jpg';
-		bgImage.onload = () => setBgLoaded(true);
-
 		function handleScroll() {
 			if (!heroRef.current) null
 			const offset = window.scrollY;

@@ -3,6 +3,8 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './PlotStart.module.scss';
 import { Wrapper } from '@/components/Wrapper/Wrapper';
+import { useImagePreload } from '@/hooks/useImagePreload';
+import Loading from '@/app/loading';
 
 interface Props {
 	title?: string;
@@ -10,6 +12,7 @@ interface Props {
 }
 export const PlotStart = ({title, heading}: Props) => {
 	const heroRef = useRef<HTMLDivElement | null>(null);
+	const bgLoaded = useImagePreload('/photos/hero_photo.jpg');
 
 	const startHeroPosition = `10%`;
 
@@ -24,6 +27,8 @@ export const PlotStart = ({title, heading}: Props) => {
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
 	}, []);
+
+	if(!bgLoaded) return <Loading/>
 
 	return (
 		<section
