@@ -10,6 +10,9 @@
 !.yarn/releases
 !.yarn/versions
 
+# large assets
+/public/video/dron_video.mp4
+
 # testing
 /coverage
 
