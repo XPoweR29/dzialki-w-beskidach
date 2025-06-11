@@ -14,7 +14,7 @@ import { PlotOther } from '@/sections/PlotsOther/PlotOther';
 import { PlotContact } from '@/sections/PlotContact/PlotContact';
 import { Metadata } from 'next';
 
-export const schema = {
+const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'Offer',
 	'@id': 'https://dzialkiwbeskidziezywieckim.pl/dzialka-1/#offer',

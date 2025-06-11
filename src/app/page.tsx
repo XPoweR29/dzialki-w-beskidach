@@ -4,7 +4,7 @@ import { HomePlots } from '@/sections/HomePlots/HomePlots';
 import { HomeVideo } from '@/sections/HomeVideo/HomeVideo';
 import { HomeMap } from '@/sections/HomeMap/HomeMap';
 
-export const schema = {
+const schema = {
 	'@context': 'https://schema.org',
 	'@type': ['WebSite', 'Organization'],
 	'@id': 'https://dzialkiwbeskidziezywieckim.pl/#main',

@@ -3,7 +3,7 @@ import { ContactStart } from '@/sections/ContactStart/ContactStart';
 import { Metadata } from 'next';
 import React from 'react';
 
-export const schema = {
+const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'ContactPage',
 	'@id': 'https://dzialkiwbeskidziezywieckim.pl/kontakt/#contact',

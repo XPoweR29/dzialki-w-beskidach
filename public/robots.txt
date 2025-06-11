@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://dzialkiwbeskidziezywieckim.pl
+
+# Sitemaps
+Sitemap: https://dzialkiwbeskidziezywieckim.pl/sitemap.xml

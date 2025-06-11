@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 	alternates: {
 		canonical: 'https://dzialkiwbeskidziezywieckim.pl/polityka-prywatnosci',
 	},
+	robots: {index: false, follow: false},
 	openGraph: {
 		title: 'Polityka Prywatności | Działki w Beskidzie Żywieckim',
 		description:
