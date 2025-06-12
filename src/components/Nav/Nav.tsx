@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { menuLinks } from '@/assets/data/navLinks';
 import Image from 'next/image';
 import iconPhone from '../../assets/icons/icon_phone.svg';
+import { siteConfig } from '@/config/site.config';
 
 export const LinkBar = () => {
 	return (
@@ -19,11 +20,11 @@ export const LinkBar = () => {
 				))}
 				<li>
 					<a
-						href='tel:+48504058507'
+						href={`tel:${siteConfig.contact.phoneHref}`}
 						className={styles.phoneButton}
-						aria-label='Zadzwoń pod numer 504 058 507'>
+						aria-label={`Zadzwoń pod numer ${siteConfig.contact.phone}`}>
 						<Image src={iconPhone} alt='' aria-hidden draggable={false} />
-						504 058 507
+						{siteConfig.contact.phone}
 					</a>
 				</li>
 			</ul>

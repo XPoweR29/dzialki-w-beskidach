@@ -8,6 +8,7 @@ import iconFb from '../../assets/icons/icon_facebook.svg';
 import Image from 'next/image';
 import Loading from '@/app/loading';
 import { useImagePreload } from '@/hooks/useImagePreload';
+import { siteConfig } from '@/config/site.config';
 
 export const HomeStart = () => {
 	const heroRef = useRef<HTMLDivElement | null>(null);
@@ -46,7 +47,7 @@ export const HomeStart = () => {
 				</Link>
 
 				<a
-					href='https://facebook.pl'
+					href={siteConfig.socials.facebook!}
 					className={styles.socialBtn}
 					target='_blank'
 					rel='noopener noreferrer'>

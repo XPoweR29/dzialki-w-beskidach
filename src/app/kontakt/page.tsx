@@ -1,32 +1,36 @@
+import { siteConfig } from '@/config/site.config';
+import { createMetadata } from '@/lib/metadata';
 import { ContactContent } from '@/sections/ContactContent/ContactContent';
 import { ContactStart } from '@/sections/ContactStart/ContactStart';
 import { Metadata } from 'next';
 import React from 'react';
 
+const SLUG = 'kontakt';
+
 const schema = {
 	'@context': 'https://schema.org',
 	'@type': 'ContactPage',
-	'@id': 'https://dzialkiwbeskidziezywieckim.pl/kontakt/#contact',
-	url: 'https://dzialkiwbeskidziezywieckim.pl/kontakt',
+	'@id': `${siteConfig.baseUrl}/${SLUG}/#contact`,
+	url: `${siteConfig.baseUrl}/${SLUG}`,
 	name: 'Kontakt | Działki w Beskidzie Żywieckim',
 	description:
 		'Skontaktuj się z nami – zadzwoń pod +48 504 058 507 lub wypełnij formularz na tej stronie.',
 	isPartOf: {
 		'@type': 'WebSite',
-		'@id': 'https://dzialkiwbeskidziezywieckim.pl/#main',
+		'@id': `${siteConfig.baseUrl}/#main`,
 	},
 	potentialAction: [
 		{
 			'@type': 'CallAction',
 			name: 'Zadzwoń do nas',
-			target: 'tel:+48504058507',
+			target: `tel:${siteConfig.contact.phoneHref}`,
 		},
 		{
 			'@type': 'SendAction',
 			name: 'Wyślij zapytanie',
 			target: {
 				'@type': 'EntryPoint',
-				urlTemplate: 'https://dzialkiwbeskidziezywieckim.pl/kontakt#formularz',
+				urlTemplate: `${siteConfig.baseUrl}/${SLUG}#formularz`,
 				actionPlatform: [
 					'https://schema.org/DesktopWebPlatform',
 					'https://schema.org/MobileWebPlatform',
@@ -36,31 +40,13 @@ const schema = {
 	],
 };
 
-export const metadata: Metadata = {
+export const metadata = createMetadata({
+	slug: SLUG,
 	title: 'Kontakt | Działki w Beskidzie Żywieckim',
 	description:
 		'Skontaktuj się z nami. Zadzwoń lub napisz maila, aby dowiedzieć się więcej o dostępnych działkach.',
-	openGraph: {
-		title: 'Kontakt | Działki w Beskidzie Żywieckim',
-		description:
-			'Skontaktuj się z nami. Zadzwoń lub napisz maila, aby dowiedzieć się więcej o dostępnych działkach.',
-		url: 'https://dzialkiwbeskidziezywieckim.pl/kontakt',
-		siteName: 'Działki w Beskidzie Żywieckim',
-		images: [
-			{
-				url: 'https://dzialkiwbeskidziezywieckim.pl/og_img.jpg',
-				width: 1200,
-				height: 630,
-				alt: 'Działki w Beskidzie Żywieckim',
-			},
-		],
-		type: 'website',
-		locale: 'pl_PL',
-	},
-	alternates: {
-		canonical: 'https://dzialkiwbeskidziezywieckim.pl/kontakt',
-	},
-};
+});
+
 
 const page = () => {
 	return (

@@ -1,6 +1,6 @@
 {
-  "name": "dzialki_w_beskidach",
-  "version": "0.1.0",
+  "name": "dzialki_w_beskidzie",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",

@@ -5,12 +5,13 @@ import styles from './ContactNap.module.scss';
 import Image from 'next/image';
 import { Wrapper } from '../Wrapper/Wrapper';
 import { ContactForm } from '../ContactForm/ContactForm';
-import { motion, stagger } from 'motion/react';
+import { motion } from 'motion/react';
 
 import iconPhone from '../../assets/icons/icon_contactPhone.png';
 import iconEnvelope from '../../assets/icons/icon_contactEnvelope.png';
 import iconFacebook from '../../assets/icons/icon_contactFacebook.png';
 import { fadeInRight } from '@/assets/animations/fadeIn';
+import { siteConfig } from '@/config/site.config';
 
 interface Props {
 	className?: string;
@@ -31,7 +32,7 @@ export const ContactNap = ({ className }: Props) => {
 						viewport={{ amount: 0.5, once: true }}>
 
 						<motion.li className={styles.napItem} variants={fadeInRight}>
-							<a href='tel:+48504058507' aria-label='Zadzwoń do nas'>
+							<a href={`tel:${siteConfig.contact.phoneHref}`} aria-label='Zadzwoń do nas'>
 								<Image
 									src={iconPhone}
 									className={styles.icon}
@@ -41,7 +42,7 @@ export const ContactNap = ({ className }: Props) => {
 								/>
 
 								<div className={styles.container}>
-									<span>+48 504-058-507</span>
+									<span>+48 {siteConfig.contact.phone}</span>
 									<p>Zadzwoń, a udzielimy ci niezbędnych informacji</p>
 								</div>
 							</a>
@@ -49,7 +50,7 @@ export const ContactNap = ({ className }: Props) => {
 
 						<motion.li className={styles.napItem} variants={fadeInRight}>
 							<a
-								href='mailto:example@mail.com'
+								href={`mailto:${siteConfig.contact.email}`}
 								aria-label='Napisz wiadomość email'>
 								<Image
 									src={iconEnvelope}
@@ -60,7 +61,7 @@ export const ContactNap = ({ className }: Props) => {
 								/>
 
 								<div className={styles.container}>
-									<span>example@mail.com</span>
+									<span>{siteConfig.contact.email}</span>
 									<p>Napisz bezpośrednio lub skorzystaj z formularza</p>
 								</div>
 							</a>
@@ -68,7 +69,7 @@ export const ContactNap = ({ className }: Props) => {
 
 						<motion.li className={styles.napItem} variants={fadeInRight}>
 							<a
-								href='https://facebook.pl'
+								href={siteConfig.socials.facebook!}
 								target='_blank'
 								rel='noopener noreferrer'
 								aria-label='Śledź nas na Facebooku'>

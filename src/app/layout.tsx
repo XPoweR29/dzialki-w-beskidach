@@ -5,6 +5,7 @@ import { ContextProvider } from '../contexts/app.context';
 import { Header } from '@/components/Header/Header';
 import { Footer } from '@/components/Footer/Footer';
 import { Toaster } from 'react-hot-toast';
+import { createMetadata } from '@/lib/metadata';
 
 const mainFont = Montserrat({
 	subsets: ['latin'],
@@ -18,32 +19,37 @@ const headingFont = Barlow_Condensed({
 	variable: '--font-barlow',
 });
 
-export const metadata: Metadata = {
-	title: 'Działki na sprzedaż w Beskidzie Żywieckim – atrakcyjna inwestycja',
-	description:
-		'Szukasz działki w Beskidzie Żywieckim? Sprawdź naszą ofertę i ciesz się inwestycją z malowniczym widokiem!',
-
-	openGraph: {
+export const metadata = createMetadata({
 		title: 'Działki na sprzedaż w Beskidzie Żywieckim – atrakcyjna inwestycja',
 		description:
 			'Szukasz działki w Beskidzie Żywieckim? Sprawdź naszą ofertę i ciesz się inwestycją z malowniczym widokiem!',
-		url: 'https://dzialkiwbeskidziezywieckim.pl',
-		siteName: 'Działki w Beskidzie Żywieckim',
-		images: [
-			{
-				url: 'https://pro-wnetrze.pl/og_img.jpg',
-				width: 1200,
-				height: 630,
-				alt: 'Beskid Żywiecki - działki na sprzedaż',
-			},
-		],
-		type: 'website',
-		locale: 'pl_PL',
-	},
-	alternates: {
-		canonical: 'https://dzialkiwbeskidziezywieckim.pl/',
-	},
-};
+});
+
+// 	title: 'Działki na sprzedaż w Beskidzie Żywieckim – atrakcyjna inwestycja',
+// 	description:
+// 		'Szukasz działki w Beskidzie Żywieckim? Sprawdź naszą ofertę i ciesz się inwestycją z malowniczym widokiem!',
+
+// 	openGraph: {
+// 		title: 'Działki na sprzedaż w Beskidzie Żywieckim – atrakcyjna inwestycja',
+// 		description:
+// 			'Szukasz działki w Beskidzie Żywieckim? Sprawdź naszą ofertę i ciesz się inwestycją z malowniczym widokiem!',
+// 		url: siteConfig.baseUrl,
+// 		siteName: siteConfig.siteName,
+// 		images: [
+// 			{
+// 				url: `${siteConfig.baseUrl}/og_img.jpg`,
+// 				width: 1200,
+// 				height: 630,
+// 				alt: siteConfig.siteName,
+// 			},
+// 		],
+// 		type: 'website',
+// 		locale: 'pl_PL',
+// 	},
+// 	alternates: {
+// 		canonical: `${siteConfig.baseUrl}`,
+// 	},
+// };
 
 export default function RootLayout({
 	children,

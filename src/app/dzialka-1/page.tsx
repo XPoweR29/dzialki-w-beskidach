@@ -12,89 +12,8 @@ import img6 from '../../assets/photos/plot1_gallery/photo_3.jpg';
 import { PlotDescription } from '@/sections/PlotDescription/PlotDescription';
 import { PlotOther } from '@/sections/PlotsOther/PlotOther';
 import { PlotContact } from '@/sections/PlotContact/PlotContact';
-import { Metadata } from 'next';
-
-const schema = {
-	'@context': 'https://schema.org',
-	'@type': 'Offer',
-	'@id': 'https://dzialkiwbeskidziezywieckim.pl/dzialka-1/#offer',
-	url: 'https://dzialkiwbeskidziezywieckim.pl/dzialka-1/',
-	isPartOf: {
-		'@type': 'WebSite',
-		'@id': 'https://dzialkiwbeskidziezywieckim.pl/#main',
-	},
-	seller: {
-		'@type': 'Organization',
-		'@id': 'https://dzialkiwbeskidziezywieckim.pl/#main',
-	},
-	itemOffered: {
-		'@type': 'Land',
-		name: 'Działka budowlana 1200 m² – Pewel Ślemieńska',
-		description: 'Piękna działka 1200 m² z mediami przy granicy.',
-		landArea: {
-			'@type': 'QuantitativeValue',
-			value: 1200,
-			unitCode: 'M2',
-		},
-		geo: {
-			'@type': 'GeoCoordinates',
-			latitude: '49.600000',
-			longitude: '19.100000',
-		},
-		address: {
-			'@type': 'PostalAddress',
-			streetAddress: 'ul. Główna 1',
-			addressLocality: 'Pewel Ślemieńska',
-			postalCode: '34-331',
-			addressCountry: 'PL',
-		},
-	},
-	priceSpecification: {
-		'@type': 'UnitPriceSpecification',
-		price: '129000',
-		priceCurrency: 'PLN',
-		unitCode: 'E62',
-	},
-	availability: 'https://schema.org/InStock',
-};
-
-export const metadata: Metadata = {
-	title:
-		'Działka budowlana 1000 m² – Pewel Ślemieńska | Działki w Beskidzie Żywieckim',
-	description:
-		'Działka budowlana 1000 m² w Pewel Ślemieńskiej, media przy granicy, dojazd drogą utwardzoną. Idealna inwestycja z widokiem na góry.',
-
-	openGraph: {
-		title:
-			'Działka budowlana 1000 m² – Pewel Ślemieńska | Działki w Beskidzie Żywieckim',
-		description:
-			'Działka budowlana 1000 m² w Pewel Ślemieńskiej, media przy granicy, dojazd drogą utwardzoną. Idealna inwestycja z widokiem na góry.',
-		url: 'https://dzialkiwbeskidziezywieckim.pl/dzialka-1',
-		siteName: 'Działki w Beskidzie Żywieckim',
-		images: [
-			{
-				url: 'https://pro-wnetrze.pl/og_img.jpg',
-				width: 1200,
-				height: 630,
-				alt: 'Działka budowlana 1000 m² w Pewel Ślemieńskiej',
-			},
-		],
-		type: 'website',
-		locale: 'pl_PL',
-	},
-	alternates: {
-		canonical: 'https://dzialkiwbeskidziezywieckim.pl/dzialka-1',
-	},
-};
-
-const GALLERY: string[] | StaticImageData[] = [
-	img1,
-	img2,
-	img3,
-	img4,
-	img5,
-	img6,
-];
+import { createMetadata } from '@/lib/metadata';
+import { siteConfig } from '@/config/site.config';
 
 const PLOT_DETAIL: PlotDetails = {
 	price: 119000,
@@ -107,6 +26,70 @@ const PLOT_DETAIL: PlotDetails = {
 	approach: 'droga utwardzona',
 	media: 'prąd',
 };
+
+const SLUG: string = 'dzialka-1' 
+
+const schema = {
+	'@context': 'https://schema.org',
+	'@type': 'Offer',
+	'@id': `${siteConfig.baseUrl}/${SLUG}/#offer`,
+	url: `${siteConfig.baseUrl}/${SLUG}`,
+	isPartOf: {
+		'@type': 'WebSite',
+		'@id': `${siteConfig.baseUrl}/#main`,
+	},
+	seller: {
+		'@type': 'Organization',
+		'@id': `${siteConfig.baseUrl}/#main`,
+	},
+	itemOffered: {
+		'@type': 'Land',
+		name: 'Działka budowlana 1200 m² – Pewel Ślemieńska',
+		description: 'Piękna działka 1200 m² z mediami przy granicy.',
+		landArea: {
+			'@type': 'QuantitativeValue',
+			value: PLOT_DETAIL.surface,
+			unitCode: 'M2',
+		},
+		geo: {
+			'@type': 'GeoCoordinates',
+			latitude: '49.600000',
+			longitude: '19.100000',
+		},
+		address: {
+			'@type': 'PostalAddress',
+			streetAddress: `ul. ${PLOT_DETAIL.streetAddress}`,
+			addressLocality: PLOT_DETAIL.location,
+			postalCode: '34-331',
+			addressCountry: 'PL',
+		},
+	},
+	priceSpecification: {
+		'@type': 'UnitPriceSpecification',
+		price: PLOT_DETAIL.price,
+		priceCurrency: 'PLN',
+		unitCode: 'E62',
+	},
+	availability: 'https://schema.org/InStock',
+};
+
+export const metadata = createMetadata({
+	slug: SLUG,
+	title:
+		'Działka budowlana 1000 m² – Pewel Ślemieńska | Działki w Beskidzie Żywieckim',
+	description:
+		'Działka budowlana 1000 m² w Pewel Ślemieńskiej, media przy granicy, dojazd drogą utwardzoną. Idealna inwestycja z widokiem na góry.',
+});
+
+const GALLERY: string[] | StaticImageData[] = [
+	img1,
+	img2,
+	img3,
+	img4,
+	img5,
+	img6,
+];
+
 
 const page = () => {
 	return (

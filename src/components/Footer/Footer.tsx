@@ -9,6 +9,7 @@ import Image from 'next/image';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import dev_logo from '../../assets/dev_logo.svg';
 import logo from '../../assets/images/logo_white.png';
+import { siteConfig } from '@/config/site.config';
 
 export const Footer = () => {
 	const pathname = usePathname();
@@ -46,18 +47,18 @@ export const Footer = () => {
 				</div>
 
 				<address className={styles.col2}>
-					<a href='tel:+48504058507' className={styles.link}>
-						<Icon icon='majesticons:phone' />
-						+48 504-058-507
+					<a href={`tel:${siteConfig.contact.phoneHref}`} className={styles.link}>
+						<Icon icon='majesticons:phone'  />
+						{`+48 ${siteConfig.contact.phone}`}
 					</a>
 
-					<a href='mailto:example@mail.com' className={styles.link}>
+					<a href={`mailto:${siteConfig.contact.email}`} className={styles.link}>
 						<Icon icon='f7:envelope-fill' />
-						example@mail.com
+						{siteConfig.contact.email}
 					</a>
 
 					<a
-						href='https://facebook.pl'
+						href={siteConfig.socials.facebook!}
 						className={styles.link}
 						target='_blank'
 						rel='noopener noreferrer'>

@@ -9,6 +9,7 @@ import { Parameters } from '@/components/Parameters/Parameters';
 import { PlotGallery } from '@/components/PlotGallery/PlotGallery';
 import { StaticImageData } from 'next/image';
 import { useBreakpoints } from '@/hooks/useBreakpoint';
+import { siteConfig } from '@/config/site.config';
 
 interface Props {
 	gallery: string[] | StaticImageData[];
@@ -46,11 +47,11 @@ export const PlotOffer = ({ gallery, details }: Props) => {
 					<Parameters className={styles.parameters}  details={details}/>
 
 					<a
-						href='tel:+48504058507'
+						href={`tel:${siteConfig.contact.phoneHref}`}
 						className={styles.phoneButton}
-						aria-label='Zadzwoń pod numer 504 058 507'>
+						aria-label={`Zadzwoń pod numer ${siteConfig.contact.phone}`}>
 						<Icon icon='ri:phone-fill' className={styles.icon} />
-						504 058 507
+						{siteConfig.contact.phone}
 					</a>
 				</div>
 
