@@ -58,7 +58,7 @@ export const ContactForm = ({ className }: { className?: string }) => {
 			id='formularz'
 			onSubmit={submitHandler}
 			className={`${styles.form} ${className}`}>
-			<h2 className={styles.heading}>Masz Cycki??</h2>
+			<h2 className={styles.heading}>Masz pytania?</h2>
 
 			<p className={styles.text}>
 				Jesteśmy do Twojej dyspozycji — wypełnij formularz, a odpowiemy na
