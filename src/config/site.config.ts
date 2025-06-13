@@ -2,7 +2,7 @@ import { SiteConfig } from "@/types/siteConfig.type";
 
 export const siteConfig: SiteConfig = {
 	baseUrl: 'https://dzialkiwbeskidzie.pl',
-	siteName: 'Działki w Beskidzie Żywieckim',
+	siteName: 'Działki na sprzedaż w Beskidzie Żywieckim',
 
 	contact: {
 		phone: '504 058 507',
@@ -19,6 +19,6 @@ export const siteConfig: SiteConfig = {
 	},
 
 	socials: {
-		facebook: 'https://www.facebook.com/dzalkiwbeskidzie',
+		facebook: 'https://www.facebook.com/dzalkiwbeskidziezywieckim',
 	},
 };

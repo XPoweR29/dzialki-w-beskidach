@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from './ContactContent.module.scss';
 import { Wrapper } from '@/components/Wrapper/Wrapper';
-import Image from 'next/image';
 import { ContactNap } from '@/components/ContactNap/ContactNap';
 
 

@@ -10,7 +10,7 @@ interface Props {
 	title?: string;
 	heading: React.ReactNode | string;
 }
-export const PlotStart = ({title, heading}: Props) => {
+export const PlotStart = ({ title, heading }: Props) => {
 	const heroRef = useRef<HTMLDivElement | null>(null);
 	const bgLoaded = useImagePreload('/photos/hero_photo.jpg');
 
@@ -18,6 +18,7 @@ export const PlotStart = ({title, heading}: Props) => {
 
 	useEffect(() => {
 		function handleScroll() {
+			if (!heroRef.current) return;
 			const offset = window.scrollY;
 			heroRef.current!.style.backgroundPositionY = `calc(${startHeroPosition} + ${
 				offset * 0.5
@@ -26,9 +27,9 @@ export const PlotStart = ({title, heading}: Props) => {
 
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
+	}, [startHeroPosition]);
 
-	if(!bgLoaded) return <Loading/>
+	if (!bgLoaded) return <Loading />;
 
 	return (
 		<section

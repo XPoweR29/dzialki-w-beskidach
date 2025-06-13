@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './ContactStart.module.scss';
 import { Wrapper } from '@/components/Wrapper/Wrapper';
 import { useImagePreload } from '@/hooks/useImagePreload';
@@ -14,6 +14,7 @@ export const ContactStart = () => {
 
 	useEffect(() => {
 		function handleScroll() {
+			if (!heroRef.current) return;
 			const offset = window.scrollY;
 			heroRef.current!.style.backgroundPositionY = `calc(${startHeroPosition} + ${
 				offset * 0.5
@@ -22,9 +23,9 @@ export const ContactStart = () => {
 
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
+	}, [startHeroPosition]);
 
-	if(!bgLoaded) return <Loading/>
+	if (!bgLoaded) return <Loading />;
 
 	return (
 		<section

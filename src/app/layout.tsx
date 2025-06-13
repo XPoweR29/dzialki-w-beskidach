@@ -1,4 +1,3 @@
-import type { Metadata } from 'next';
 import { Barlow_Condensed, Montserrat } from 'next/font/google';
 import '../sass/globals.scss';
 import { ContextProvider } from '../contexts/app.context';
@@ -24,32 +23,6 @@ export const metadata = createMetadata({
 		description:
 			'Szukasz działki w Beskidzie Żywieckim? Sprawdź naszą ofertę i ciesz się inwestycją z malowniczym widokiem!',
 });
-
-// 	title: 'Działki na sprzedaż w Beskidzie Żywieckim – atrakcyjna inwestycja',
-// 	description:
-// 		'Szukasz działki w Beskidzie Żywieckim? Sprawdź naszą ofertę i ciesz się inwestycją z malowniczym widokiem!',
-
-// 	openGraph: {
-// 		title: 'Działki na sprzedaż w Beskidzie Żywieckim – atrakcyjna inwestycja',
-// 		description:
-// 			'Szukasz działki w Beskidzie Żywieckim? Sprawdź naszą ofertę i ciesz się inwestycją z malowniczym widokiem!',
-// 		url: siteConfig.baseUrl,
-// 		siteName: siteConfig.siteName,
-// 		images: [
-// 			{
-// 				url: `${siteConfig.baseUrl}/og_img.jpg`,
-// 				width: 1200,
-// 				height: 630,
-// 				alt: siteConfig.siteName,
-// 			},
-// 		],
-// 		type: 'website',
-// 		locale: 'pl_PL',
-// 	},
-// 	alternates: {
-// 		canonical: `${siteConfig.baseUrl}`,
-// 	},
-// };
 
 export default function RootLayout({
 	children,

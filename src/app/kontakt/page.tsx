@@ -2,7 +2,6 @@ import { siteConfig } from '@/config/site.config';
 import { createMetadata } from '@/lib/metadata';
 import { ContactContent } from '@/sections/ContactContent/ContactContent';
 import { ContactStart } from '@/sections/ContactStart/ContactStart';
-import { Metadata } from 'next';
 import React from 'react';
 
 const SLUG = 'kontakt';

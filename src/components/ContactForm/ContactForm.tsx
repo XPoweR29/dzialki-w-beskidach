@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import styles from './ContactForm.module.scss';
 import { ContactFormData, useContactForm } from '@/hooks/useContactForm';
 import Link from 'next/link';
@@ -17,8 +17,8 @@ export const ContactForm = ({ className }: { className?: string }) => {
 			formData.append('email', data.email);
 			if (data.phone) formData.append('phone', `+48${data.phone}`);
 			formData.append('message', data.message);
-			formData.append('sender', 'kontakt@pro-wnetrze.pl');
-			formData.append('recipient', 'ceo.webcraftstudio@gmail.com');
+			formData.append('sender', 'kontakt@dzialkiwbeskidzie.pl');
+			formData.append('recipient', 'kontakt@dzialkiwbeskidzie.pl');
 
 			const response = await fetch(
 				'https://backendapp-gamma.vercel.app/api/send-mail',
@@ -58,7 +58,7 @@ export const ContactForm = ({ className }: { className?: string }) => {
 			id='formularz'
 			onSubmit={submitHandler}
 			className={`${styles.form} ${className}`}>
-			<h2 className={styles.heading}>Masz pytania?</h2>
+			<h2 className={styles.heading}>Masz Cycki??</h2>
 
 			<p className={styles.text}>
 				Jesteśmy do Twojej dyspozycji — wypełnij formularz, a odpowiemy na

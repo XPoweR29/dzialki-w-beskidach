@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './HomeStart.module.scss';
 import { Wrapper } from '@/components/Wrapper/Wrapper';
 import Link from 'next/link';
@@ -17,8 +17,9 @@ export const HomeStart = () => {
 	const startHeroPosition = `10%`;
 
 	useEffect(() => {
+		//FIXME: exclude this into seperate utils
 		function handleScroll() {
-			if (!heroRef.current) null
+			if (!heroRef.current) return;
 			const offset = window.scrollY;
 			heroRef.current!.style.backgroundPositionY = `calc(${startHeroPosition} + ${
 				offset * 0.5
@@ -27,7 +28,7 @@ export const HomeStart = () => {
 
 		window.addEventListener('scroll', handleScroll);
 		return () => window.removeEventListener('scroll', handleScroll);
-	}, []);
+	}, [startHeroPosition]);
 
 	if(!bgLoaded) return <Loading/>
 

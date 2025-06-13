@@ -8,7 +8,6 @@ import 'swiper/css';
 import Image, { StaticImageData } from 'next/image';
 import { useGallery } from '@/hooks/useGallery';
 import { SwiperButtons } from '../SwiperButtons/SwiperButtons';
-import { Space_Grotesk } from 'next/font/google';
 
 interface Props {
 	slides: string[] | StaticImageData[];
