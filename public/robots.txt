@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://dzialkiwbeskidziezywieckim.pl
+Host: https://dzialkiwbeskidzie.pl
 
 # Sitemaps
-Sitemap: https://dzialkiwbeskidziezywieckim.pl/sitemap.xml
+Sitemap: https://dzialkiwbeskidzie.pl/sitemap.xml

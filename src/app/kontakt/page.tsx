@@ -41,7 +41,7 @@ const schema = {
 
 export const metadata = createMetadata({
 	slug: SLUG,
-	title: 'Kontakt | Działki w Beskidzie Żywieckim',
+	title: 'Kontakt | Działki na sprzedaż w Beskidzie Żywieckim',
 	description:
 		'Skontaktuj się z nami. Zadzwoń lub napisz maila, aby dowiedzieć się więcej o dostępnych działkach.',
 });

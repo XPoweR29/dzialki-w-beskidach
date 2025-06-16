@@ -1,6 +1,4 @@
-import { SiteConfig } from "@/types/siteConfig.type";
-
-export const siteConfig: SiteConfig = {
+export const siteConfig = {
 	baseUrl: 'https://dzialkiwbeskidzie.pl',
 	siteName: 'Działki na sprzedaż w Beskidzie Żywieckim',
 
