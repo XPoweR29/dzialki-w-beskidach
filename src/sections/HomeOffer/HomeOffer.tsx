@@ -20,22 +20,25 @@ export const HomeOffer = () => {
 
 					<TextContainer className={styles.text}>
 						<p>
-							Oferujemy działki na sprzedaż w Pewli Ślemieńskiej, zaledwie 12 km
-							od Żywca – zarówno działki budowlane, jak i działki rolne. Każda
-							parcela ma bezpośredni dojazd drogą gruntową, znajduje się blisko
-							lasu i zachwyca panoramą górskich szczytów, co czyni ją idealną
-							inwestycją pod budowę całorocznego domu, rekreacyjnego domku czy
-							agroturystyki.
+							Oferujemy na sprzedaż wyselekcjonowane działki zlokalizowane w
+							malowniczych miejscowościach Beskidu Żywieckiego – w Gilowicach
+							oraz w Pewli Ślemieńskiej. To spokojne i atrakcyjne tereny
+							oddalone zaledwie kilkanaście minut jazdy od Żywca, idealne
+							zarówno pod inwestycję, jak i wypoczynek.
 						</p>
 						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo
-							dolorum in reprehenderit voluptas tempore, vitae odio? Officiis
-							ipsa expedita aperiam modi quis, nobis repellendus tenetur
-							perspiciatis possimus amet sint aut placeat, dignissimos velit
-							asperiores! Dolores voluptatibus minus quaerat error eius in,
-							nesciunt, voluptate, aliquam deserunt vel qui pariatur alias
-							placeat odio non itaque at iure vitae architecto assumenda
-							cupiditate eveniet.
+							W ofercie znajdują się działki o różnych
+							powierzchniach. Część z nich ma bezpośredni dostęp do drogi
+							asfaltowej lub utwardzonej, a także dostęp do mediów. Wybrane działki położone są w
+							sąsiedztwie lasów i szlaków turystycznych, oferując piękne widoki
+							na góry i ciszę z dala od miejskiego zgiełku. Inne wyróżniają się
+							świetnym układem, korzystnym planem zagospodarowania i bliskością
+							lokalnej infrastruktury.
+						</p>
+						<p>
+							Jeśli szukasz miejsca na dom, rekreację, działalność turystyczną
+							lub bezpieczną lokatę kapitału – nasze oferty z pewnością spełnią
+							Twoje oczekiwania.
 						</p>
 					</TextContainer>
 

@@ -8,7 +8,11 @@ import { motion } from 'motion/react';
 import { useBreakpoints } from '@/hooks/useBreakpoint';
 import { Map } from '@/components/Map/Map';
 
-export const PlotContact = () => {
+interface Props {
+	mapLocation?: string;
+}
+
+export const PlotContact = ({ mapLocation }: Props) => {
 	const { breakpoint } = useBreakpoints();
 
 	return (
@@ -21,7 +25,7 @@ export const PlotContact = () => {
 					transition={{ duration: 0.5 }}
 					viewport={{ amount: 0.2, once: true }}>
 					<ContactForm className={styles.form}/>
-					{breakpoint.lg && <Map className={styles.map} anime={false}/>}
+					{breakpoint.lg && <Map className={styles.map} anime={false} location={mapLocation}/>}
 				</motion.div>
 			</Wrapper>
 		</section>

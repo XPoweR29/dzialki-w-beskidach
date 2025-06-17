@@ -8,4 +8,5 @@ interface PlotDetails {
     plotNumber?: string;
     approach: string;
     media: string;
+    gmPin?: string;
 }
