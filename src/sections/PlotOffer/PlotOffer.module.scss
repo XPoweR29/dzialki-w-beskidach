@@ -57,15 +57,26 @@
 		align-items: flex-end;
 		gap: 1em;
 
+		//hidden main price
+		// p {
+		// 	font-weight: 600;
+		// 	letter-spacing: 2px;
+		// }
+
+		// span {
+		// 	font-size: 0.45em;
+		// 	text-transform: none;
+		// 	margin-bottom: 7px;
+		// }
+
 		p {
-			font-weight: 600;
-			letter-spacing: 2px;
+			display: none;
 		}
 
 		span {
-			font-size: 0.45em;
-			text-transform: none;
-			margin-bottom: 7px;
+				font-weight: 600;
+				letter-spacing: 2px;
+				text-transform: none;
 		}
 	}
 
