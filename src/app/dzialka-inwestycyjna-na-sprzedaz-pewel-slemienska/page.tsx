@@ -114,25 +114,27 @@ const page = () => {
 					Krakowska w miejscowości Pewel Ślemieńska, gmina Świnna, powiat
 					żywiecki.
 				</p>
-				<p>
-					Działka posiada ogromy potencjał inwestycyjny, ze względu na
-					położenie, gdyż leży pod samym lasem w Beskidach, dookoła też szlaki
-					turystyczne oraz przepiękne widoki. Aktualnie działka rolna, natomiast{' '}
-					<strong>
-						aktualnie w gminie Świnna trwa zmiana MPZP i w nowym planie około 30
-						% będzie zmienione na część budowlaną – zabudowa mieszkaniowa
-						jednorodzinna – MN
-					</strong>
-					. Zmiana statusu pozwoli nowemu inwestorowi na budowę kilku domów
-					jednorodzinnych lub domków letniskowych, idealnie nadaję się na budowę
-					domków pod wynajem, mini osiedle lub pole kempingowe, czy kamperowe.
-					MASZ POMYSŁ NA BIZNES – ZADZWOŃ!!!
-				</p>
 
 				<ul>
 					<li>Działka nr: 2794/7 – powierzchnia 9849 m²</li>
 					<li>Działka nr: 2794/3 – powierzchnia 298 m² (droga dojazdowa)</li>
 				</ul>
+
+				<p>
+					Działka posiada ogromy potencjał inwestycyjny, ze względu na
+					położenie, gdyż leży pod samym lasem w Beskidach, dookoła też szlaki
+					turystyczne oraz przepiękne widoki. Aktualnie działka rolna, natomiast{' '}
+					<strong>
+						aktualnie w gminie Świnna trwa zmiana MPZP i w nowym planie około
+						30% będzie zmienione na część budowlaną – zabudowa mieszkaniowa
+						jednorodzinna – MN
+					</strong>
+					. Zmiana statusu pozwoli nowemu inwestorowi na budowę kilku domów
+					jednorodzinnych lub domków letniskowych, idealnie nadaję się na budowę
+					domków pod wynajem, mini osiedle lub pole kempingowe, czy kamperowe.
+					<br />
+					MASZ POMYSŁ NA BIZNES ? – ZADZWOŃ!!!
+				</p>
 
 				<p>
 					Prąd znajduje się bezpośrednio obok działki, natomiast woda oraz
@@ -142,7 +144,7 @@ const page = () => {
 
 				<strong>
 					Działka w MPZP oznaczona symbolem – R – tereny rolnicze oraz
-					dopuszczalna zabudowa zagrodowa, natomiast w nowym MPZP – 30 %
+					dopuszczalna zabudowa zagrodowa, natomiast w nowym MPZP – 30%
 					zmienione na – MN – tereny zabudowy mieszkaniowej jednorodzinnej.
 				</strong>
 				<br />
