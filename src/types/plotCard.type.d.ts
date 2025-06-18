@@ -5,4 +5,5 @@ interface PlotCard {
 	destination: string;
 	location: string;
 	pageSlug: string;
+	pricePerM?: string;
 }

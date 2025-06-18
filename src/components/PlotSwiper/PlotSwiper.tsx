@@ -41,6 +41,7 @@ export const PlotSwiper = () => {
 							destination={plot.destination}
 							location={plot.location}
 							pageSlug={plot.pageSlug}
+							pricePerM={plot.pricePerM}
 						/>
 					</SwiperSlide>
 				))}

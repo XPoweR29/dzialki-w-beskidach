@@ -5,11 +5,11 @@ import { Icon } from '@iconify/react';
 import Link from 'next/link';
 
 
-export const PlotCard = ({cardImg, title, surface, destination, location, pageSlug}: PlotCard) => {
+export const PlotCard = ({cardImg, title, surface, destination, location, pageSlug, pricePerM}: PlotCard) => {
 	return (
 		<article className={styles.card}>
 			<Image
-                className={styles.photo}
+				className={styles.photo}
 				src={cardImg}
 				priority
 				alt='Działka pod lasem w beskidzie żywieckim'
@@ -18,6 +18,10 @@ export const PlotCard = ({cardImg, title, surface, destination, location, pageSl
 
 			<h3 className={styles.title}>{title}</h3>
 			<ul className={styles.featuresList}>
+				<li className={styles.item}>
+					<Icon icon='entypo:price-tag' aria-hidden />
+					<span className={styles.price}>{`${pricePerM} zł/m²`}</span>
+				</li>
 				<li className={styles.item}>
 					<Icon icon='fluent:slide-size-24-filled' aria-hidden />
 					<span>{surface}</span>
@@ -32,7 +36,9 @@ export const PlotCard = ({cardImg, title, surface, destination, location, pageSl
 				</li>
 			</ul>
 
-			<Link href={`/${pageSlug}`} className={styles.button}>Szczegóły</Link>
+			<Link href={`/${pageSlug}`} className={styles.button}>
+				Szczegóły
+			</Link>
 		</article>
 	);
 };
