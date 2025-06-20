@@ -25,7 +25,7 @@ const PLOT_DETAIL: PlotDetails = {
 	destination: 'rolna',
 	plotNumber: '2794/7, 2794/3',
 	approach: 'droga asfaltowa',
-	media: 'prąd, woda i kanalizacja ok. 70m',
+	media: 'prąd',
 };
 
 const SLUG: string = 'dzialka-inwestycyjna-na-sprzedaz-pewel-slemienska';

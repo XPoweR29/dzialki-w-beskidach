@@ -35,14 +35,14 @@ export default function RootLayout({
 			<head>
 				<Script
 					async
-					src='https://www.googletagmanager.com/gtag/js?id=G-6J8N596R4K'
+					src='https://www.googletagmanager.com/gtag/js?id=G-KQYSPS1DWT'
 				/>
 				<Script id='gtag-init' strategy='afterInteractive'>
-						{`
+					{`
 						window.dataLayer = window.dataLayer || [];
 						function gtag(){window.dataLayer.push(arguments);}
 						gtag('js', new Date());
-						gtag('config', 'G-6J8N596R4K', {
+						gtag('config', 'G-KQYSPS1DWT', {
 						anonymize_ip: true,
 						cookie_flags: 'SameSite=None; Secure'
 						});
