@@ -132,14 +132,10 @@ const page = () => {
 					. Zmiana statusu pozwoli nowemu inwestorowi na budowę kilku domów
 					jednorodzinnych lub domków letniskowych, idealnie nadaję się na budowę
 					domków pod wynajem, mini osiedle lub pole kempingowe, czy kamperowe.
+					<br/>
+					Prąd znajduje się bezpośrednio obok działki.
 					<br />
 					MASZ POMYSŁ NA BIZNES ? – ZADZWOŃ!!!
-				</p>
-
-				<p>
-					Prąd znajduje się bezpośrednio obok działki, natomiast woda oraz
-					kanalizacja gminna dostępne są w drodze głównej – ul. Krakowskiej, w
-					odległości około 70 metrów od granicy działki.
 				</p>
 
 				<strong>

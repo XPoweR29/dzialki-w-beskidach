@@ -5,6 +5,7 @@ import { Header } from '@/components/Header/Header';
 import { Footer } from '@/components/Footer/Footer';
 import { Toaster } from 'react-hot-toast';
 import { createMetadata } from '@/lib/metadata';
+import Script from 'next/script';
 
 const mainFont = Montserrat({
 	subsets: ['latin'],
@@ -19,9 +20,9 @@ const headingFont = Barlow_Condensed({
 });
 
 export const metadata = createMetadata({
-		title: 'Działki na sprzedaż w Beskidzie Żywieckim – atrakcyjna inwestycja',
-		description:
-			'Szukasz działki w Beskidzie Żywieckim? Sprawdź naszą ofertę i ciesz się inwestycją z malowniczym widokiem!',
+	title: 'Działki na sprzedaż w Beskidzie Żywieckim – atrakcyjna inwestycja',
+	description:
+		'Szukasz działki w Beskidzie Żywieckim? Sprawdź naszą ofertę i ciesz się inwestycją z malowniczym widokiem!',
 });
 
 export default function RootLayout({
@@ -31,6 +32,23 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='pl' className={`${mainFont.variable} ${headingFont.variable}`}>
+			<head>
+				<Script
+					async
+					src='https://www.googletagmanager.com/gtag/js?id=G-6J8N596R4K'
+				/>
+				<Script id='gtag-init' strategy='afterInteractive'>
+						{`
+						window.dataLayer = window.dataLayer || [];
+						function gtag(){window.dataLayer.push(arguments);}
+						gtag('js', new Date());
+						gtag('config', 'G-6J8N596R4K', {
+						anonymize_ip: true,
+						cookie_flags: 'SameSite=None; Secure'
+						});
+					`}
+				</Script>
+			</head>
 			<body className={mainFont.className}>
 				<ContextProvider>
 					<Header />
