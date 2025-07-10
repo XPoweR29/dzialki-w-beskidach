@@ -3,12 +3,10 @@ import { PlotStart } from '@/sections/PlotStart/PlotStart';
 import { StaticImageData } from 'next/image';
 import React from 'react';
 
-import img1 from '../../assets/photos/dzialka1/photo_1.jpg';
-import img2 from '../../assets/photos/dzialka1/photo_2.jpg';
-import img3 from '../../assets/photos/dzialka1/photo_3.jpg';
-import img4 from '../../assets/photos/dzialka1/photo_1.jpg';
-import img5 from '../../assets/photos/dzialka1/photo_2.jpg';
-import img6 from '../../assets/photos/dzialka1/photo_3.jpg';
+import img1 from '../../assets/photos/dzialka2/photo1.webp';
+import img2 from '../../assets/photos/dzialka2/photo2.webp';
+import img3 from '../../assets/photos/dzialka2/photo3.webp';
+import img4 from '../../assets/photos/dzialka2/photo4.webp';
 
 import { PlotDescription } from '@/sections/PlotDescription/PlotDescription';
 import { PlotOther } from '@/sections/PlotsOther/PlotOther';
@@ -85,8 +83,6 @@ const GALLERY: string[] | StaticImageData[] = [
 	img2,
 	img3,
 	img4,
-	img5,
-	img6,
 ];
 
 const page = () => {

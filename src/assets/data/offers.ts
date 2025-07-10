@@ -1,6 +1,6 @@
-import plot1 from '../../assets/photos/dzialka1/plot1_main.jpg';
-import plot2 from '../../assets/photos/dzialka2/dzialka2_main.jpg';
-import plot3 from '../../assets/photos/dzialka3/dzialka3_main.jpg';
+import plot1 from '../../assets/photos/dzialka1/photo01.webp';
+import plot2 from '../../assets/photos/dzialka3/photo1.webp';
+import plot3 from '../../assets/photos/dzialka2/photo1.webp';
 
 export const offers: PlotCard[] = [
 	{

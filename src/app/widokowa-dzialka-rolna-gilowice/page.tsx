@@ -3,12 +3,14 @@ import { PlotStart } from '@/sections/PlotStart/PlotStart';
 import { StaticImageData } from 'next/image';
 import React from 'react';
 
-import img1 from '../../assets/photos/dzialka1/photo_1.jpg';
-import img2 from '../../assets/photos/dzialka1/photo_2.jpg';
-import img3 from '../../assets/photos/dzialka1/photo_3.jpg';
-import img4 from '../../assets/photos/dzialka1/photo_1.jpg';
-import img5 from '../../assets/photos/dzialka1/photo_2.jpg';
-import img6 from '../../assets/photos/dzialka1/photo_3.jpg';
+import img1 from '../../assets/photos/dzialka3/photo1.webp';
+import img2 from '../../assets/photos/dzialka3/photo2.webp';
+import img3 from '../../assets/photos/dzialka3/photo3.webp';
+import img4 from '../../assets/photos/dzialka3/photo4.webp';
+import img5 from '../../assets/photos/dzialka3/photo5.webp';
+import img6 from '../../assets/photos/dzialka3/photo6.webp';
+import img7 from '../../assets/photos/dzialka3/photo7.webp';
+
 import { PlotDescription } from '@/sections/PlotDescription/PlotDescription';
 import { PlotOther } from '@/sections/PlotsOther/PlotOther';
 import { PlotContact } from '@/sections/PlotContact/PlotContact';
@@ -87,6 +89,7 @@ const GALLERY: string[] | StaticImageData[] = [
 	img4,
 	img5,
 	img6,
+	img7,
 ];
 
 const page = () => {

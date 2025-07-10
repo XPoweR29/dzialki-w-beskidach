@@ -3,12 +3,17 @@ import { PlotStart } from '@/sections/PlotStart/PlotStart';
 import { StaticImageData } from 'next/image';
 import React from 'react';
 
-import img1 from '../../assets/photos/dzialka1/photo_1.jpg';
-import img2 from '../../assets/photos/dzialka1/photo_2.jpg';
-import img3 from '../../assets/photos/dzialka1/photo_3.jpg';
-import img4 from '../../assets/photos/dzialka1/photo_1.jpg';
-import img5 from '../../assets/photos/dzialka1/photo_2.jpg';
-import img6 from '../../assets/photos/dzialka1/photo_3.jpg';
+import img1 from '../../assets/photos/dzialka1/photo01.webp';
+import img2 from '../../assets/photos/dzialka1/photo02.webp';
+import img3 from '../../assets/photos/dzialka1/photo03.webp';
+import img4 from '../../assets/photos/dzialka1/photo04.webp';
+import img5 from '../../assets/photos/dzialka1/photo05.webp';
+import img6 from '../../assets/photos/dzialka1/photo06.webp';
+import img7 from '../../assets/photos/dzialka1/photo07.webp';
+import img8 from '../../assets/photos/dzialka1/photo08.webp';
+import img9 from '../../assets/photos/dzialka1/photo09.webp';
+import img10 from '../../assets/photos/dzialka1/photo10.webp';
+import img11 from '../../assets/photos/dzialka1/photo11.webp';
 
 import { PlotDescription } from '@/sections/PlotDescription/PlotDescription';
 import { PlotOther } from '@/sections/PlotsOther/PlotOther';
@@ -86,6 +91,11 @@ const GALLERY: string[] | StaticImageData[] = [
 	img4,
 	img5,
 	img6,
+	img7,
+	img8,
+	img9,
+	img10,
+	img11,
 ];
 
 const page = () => {
@@ -132,7 +142,7 @@ const page = () => {
 					. Zmiana statusu pozwoli nowemu inwestorowi na budowę kilku domów
 					jednorodzinnych lub domków letniskowych, idealnie nadaję się na budowę
 					domków pod wynajem, mini osiedle lub pole kempingowe, czy kamperowe.
-					<br/>
+					<br />
 					Prąd znajduje się bezpośrednio obok działki.
 					<br />
 					MASZ POMYSŁ NA BIZNES ? – ZADZWOŃ!!!
