@@ -7,6 +7,17 @@ import img1 from '../../assets/photos/dzialka2/photo1.webp';
 import img2 from '../../assets/photos/dzialka2/photo2.webp';
 import img3 from '../../assets/photos/dzialka2/photo3.webp';
 import img4 from '../../assets/photos/dzialka2/photo4.webp';
+import img5 from '../../assets/photos/dzialka2/photo05.webp';
+import img6 from '../../assets/photos/dzialka2/photo06.webp';
+import img7 from '../../assets/photos/dzialka2/photo07.webp';
+import img8 from '../../assets/photos/dzialka2/photo08.webp';
+import img9 from '../../assets/photos/dzialka2/photo09.webp';
+import img10 from '../../assets/photos/dzialka2/photo10.webp';
+import img11 from '../../assets/photos/dzialka2/photo11.webp';
+import img12 from '../../assets/photos/dzialka2/photo12.webp';
+import img13 from '../../assets/photos/dzialka2/photo13.webp';
+import img14 from '../../assets/photos/dzialka2/photo14.webp';
+import img15 from '../../assets/photos/dzialka2/photo15.webp';
 
 import { PlotDescription } from '@/sections/PlotDescription/PlotDescription';
 import { PlotOther } from '@/sections/PlotsOther/PlotOther';
@@ -83,6 +94,17 @@ const GALLERY: string[] | StaticImageData[] = [
 	img2,
 	img3,
 	img4,
+	img5,
+	img6,
+	img7,
+	img8, 
+	img9,
+	img10,
+	img11,
+	img12,
+	img13,
+	img14,
+	img15,
 ];
 
 const page = () => {

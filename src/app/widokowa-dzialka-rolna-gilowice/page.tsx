@@ -10,6 +10,11 @@ import img4 from '../../assets/photos/dzialka3/photo4.webp';
 import img5 from '../../assets/photos/dzialka3/photo5.webp';
 import img6 from '../../assets/photos/dzialka3/photo6.webp';
 import img7 from '../../assets/photos/dzialka3/photo7.webp';
+import img8 from '../../assets/photos/dzialka3/photo08.webp';
+import img9 from '../../assets/photos/dzialka3/photo09.webp';
+import img10 from '../../assets/photos/dzialka3/photo10.webp';
+import img11 from '../../assets/photos/dzialka3/photo11.webp';
+import img12 from '../../assets/photos/dzialka3/photo12.webp';
 
 import { PlotDescription } from '@/sections/PlotDescription/PlotDescription';
 import { PlotOther } from '@/sections/PlotsOther/PlotOther';
@@ -90,6 +95,11 @@ const GALLERY: string[] | StaticImageData[] = [
 	img5,
 	img6,
 	img7,
+	img8,
+	img9,
+	img10,
+	img11,
+	img12
 ];
 
 const page = () => {

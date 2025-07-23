@@ -14,6 +14,20 @@ import img8 from '../../assets/photos/dzialka1/photo08.webp';
 import img9 from '../../assets/photos/dzialka1/photo09.webp';
 import img10 from '../../assets/photos/dzialka1/photo10.webp';
 import img11 from '../../assets/photos/dzialka1/photo11.webp';
+import img12 from '../../assets/photos/dzialka1/photo12.webp';
+import img13 from '../../assets/photos/dzialka1/photo13.webp';
+import img14 from '../../assets/photos/dzialka1/photo14.webp';
+import img15 from '../../assets/photos/dzialka1/photo15.webp';
+import img16 from '../../assets/photos/dzialka1/photo16.webp';
+import img17 from '../../assets/photos/dzialka1/photo17.webp';
+import img18 from '../../assets/photos/dzialka1/photo18.webp';
+import img19 from '../../assets/photos/dzialka1/photo19.webp';
+import img20 from '../../assets/photos/dzialka1/photo20.webp';
+import img21 from '../../assets/photos/dzialka1/photo21.webp';
+import img22 from '../../assets/photos/dzialka1/photo22.webp';
+import img23 from '../../assets/photos/dzialka1/photo23.webp';
+import img24 from '../../assets/photos/dzialka1/photo24.webp';
+import img25 from '../../assets/photos/dzialka1/photo25.webp';
 
 import { PlotDescription } from '@/sections/PlotDescription/PlotDescription';
 import { PlotOther } from '@/sections/PlotsOther/PlotOther';
@@ -96,6 +110,20 @@ const GALLERY: string[] | StaticImageData[] = [
 	img9,
 	img10,
 	img11,
+	img12,
+	img13,
+	img14,
+	img15,
+	img16,
+	img17,
+	img18,
+	img19,
+	img20,
+	img21,
+	img22,
+	img23,
+	img24,
+	img25,
 ];
 
 const page = () => {
