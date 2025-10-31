@@ -41,7 +41,7 @@ const PLOT_DETAIL: PlotDetails = {
 	streetAddress: 'Krakowska',
 	surface: 10147,
 	dimensions: '42 x 236',
-	destination: 'rolna',
+	destination: '38% (MN), 62% (R)',
 	plotNumber: '2794/7, 2794/3',
 	approach: 'droga asfaltowa',
 	media: 'prąd',
@@ -147,44 +147,75 @@ const page = () => {
 
 			<PlotDescription>
 				<p>
-					Oferta sprzedaży dotyczy dwóch działek rolnych w kształcie prostokąta
-					o łącznej powierzchni 10147 m² z dostępem do drogi gminnej – ulica
-					Krakowska w miejscowości Pewel Ślemieńska, gmina Świnna, powiat
-					żywiecki.
+					Na sprzedaż atrakcyjna działka o łącznej powierzchni{' '}
+					<strong>1,0147 ha</strong>, położona w malowniczej miejscowości{' '}
+					<strong>Pewel Ślemieńska</strong>, gmina Świnna, powiat żywiecki – w
+					samym sercu Beskidu Żywieckiego.
 				</p>
 
+				<p>W skład nieruchomości wchodzą dwie działki:</p>
 				<ul>
-					<li>Działka nr: 2794/7 – powierzchnia 9849 m²</li>
-					<li>Działka nr: 2794/3 – powierzchnia 298 m² (droga dojazdowa)</li>
+					<li>
+						<strong>nr 2794/7</strong> – powierzchnia <strong>9849 m²</strong>
+					</li>
+					<li>
+						<strong>nr 2794/3</strong> – powierzchnia <strong>298 m²</strong>{' '}
+						(droga dojazdowa)
+					</li>
+				</ul>
+
+				<h3 style={{ fontSize: '1.4em', margin: '1em 0' }}>
+					Atuty nieruchomości
+				</h3>
+				<ul>
+					<li>
+						Położona pod samym lasem, w otoczeniu natury i górskich szlaków
+					</li>
+					<li>Przepiękne widoki na panoramę Beskidów</li>
+					<li>Bezpośredni dojazd asfaltowy</li>
+					<li>Prąd w granicy działki</li>
+					<li>
+						Cisza, spokój i przestrzeń – idealne miejsce na dom lub inwestycję
+					</li>
+				</ul>
+
+				<h3 style={{ fontSize: '1.4em', margin: '1em 0' }}>
+					Potencjał inwestycyjny
+				</h3>
+				<p>
+					Działka objęta jest obowiązującym{' '}
+					<strong>
+						Miejscowym Planem Zagospodarowania Przestrzennego gminy Świnna
+					</strong>{' '}
+					(Uchwała Rady Gminy Świnna opublikowana w Dzienniku Urzędowym
+					Województwa Śląskiego).
+				</p>
+
+				<p>
+					Około <strong>38% powierzchni (ok. 3 700 m²)</strong> znajduje się w
+					strefie{' '}
+					<strong>F.1.MN.42 – zabudowa mieszkaniowa jednorodzinna</strong>,
+					natomiast pozostała część –{' '}
+					<strong>F.1.R.22 – tereny rolne o charakterze rekreacyjnym</strong>.
+				</p>
+
+				<p>Dzięki temu działka doskonale nadaje się pod:</p>
+				<ul>
+					<li>budowę domów jednorodzinnych lub domków letniskowych,</li>
+					<li>realizację mini osiedla z widokiem na góry,</li>
+					<li>projekt agroturystyczny, glamping lub pole kamperowe,</li>
+					<li>połączenie funkcji mieszkalnej i rekreacyjnej.</li>
 				</ul>
 
 				<p>
-					Działka posiada ogromy potencjał inwestycyjny, ze względu na
-					położenie, gdyż leży pod samym lasem w Beskidach, dookoła też szlaki
-					turystyczne oraz przepiękne widoki. Aktualnie działka rolna, natomiast{' '}
-					<strong>
-						aktualnie w gminie Świnna trwa zmiana MPZP i w nowym planie około
-						30% będzie zmienione na część budowlaną – zabudowa mieszkaniowa
-						jednorodzinna – MN
-					</strong>
-					. Zmiana statusu pozwoli nowemu inwestorowi na budowę kilku domów
-					jednorodzinnych lub domków letniskowych, idealnie nadaję się na budowę
-					domków pod wynajem, mini osiedle lub pole kempingowe, czy kamperowe.
-					<br />
-					Prąd znajduje się bezpośrednio obok działki.
-					<br />
-					MASZ POMYSŁ NA BIZNES ? – ZADZWOŃ!!!
+					To gotowa do inwestycji działka z uchwalonym planem miejscowym,
+					położona w wyjątkowym, widokowym miejscu. Idealna dla inwestora,
+					dewelopera lub osób marzących o własnym domu w górach.
 				</p>
 
-				<strong>
-					Działka w MPZP oznaczona symbolem – R – tereny rolnicze oraz
-					dopuszczalna zabudowa zagrodowa, natomiast w nowym MPZP – 30%
-					zmienione na – MN – tereny zabudowy mieszkaniowej jednorodzinnej.
-				</strong>
-				<br />
 				<p>
-					Więcej informacji udzielę telefonicznie.
-					<br /> Zapraszam do kontaku.
+					Piękna panorama, świeże powietrze i bliskość natury sprawiają, że to
+					również <strong>bezpieczna lokata kapitału.</strong>
 				</p>
 			</PlotDescription>
 
