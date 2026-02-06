@@ -18,7 +18,7 @@ export const ContactForm = ({ className }: { className?: string }) => {
 			if (data.phone) formData.append('phone', `+48${data.phone}`);
 			formData.append('message', data.message);
 			formData.append('sender', 'kontakt@dzialkiwbeskidzie.pl');
-			formData.append('recipient', 'kontakt@dzialkiwbeskidzie.pl');
+			formData.append('recipient', 'rancho.adama@gmail.com');
 
 			const response = await fetch(
 				'https://backendapp-gamma.vercel.app/api/send-mail',
