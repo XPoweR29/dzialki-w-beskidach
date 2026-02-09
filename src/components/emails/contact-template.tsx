@@ -93,7 +93,7 @@ const styles = {
 	},
 	header: {
 		textAlign: 'center' as const,
-		backgroundColor: '#4e68c6',
+		backgroundColor: '#195126',
 		color: '#ffffff',
 		borderRadius: '8px 8px 0 0',
 	},
@@ -120,7 +120,7 @@ const styles = {
 	},
 	label: {
 		marginRight: '0.3em',
-		color: '#4e68c6',
+		color: '#195126',
 		fontWeight: 'bold',
 	},
 	message: {
