@@ -41,7 +41,7 @@ const PLOT_DETAIL: PlotDetails = {
 	streetAddress: 'Krakowska',
 	surface: 10147,
 	dimensions: '42 x 236',
-	destination: '38% (MN), 62% (R)',
+	destination: '24% (MN), 76% (R)',
 	plotNumber: '2794/7, 2794/3',
 	approach: 'droga asfaltowa',
 	media: 'prąd',
@@ -192,7 +192,7 @@ const page = () => {
 				</p>
 
 				<p>
-					Około <strong>38% powierzchni (ok. 3 700 m²)</strong> znajduje się w
+					Około <strong>24% powierzchni (ok. 2 431 m²)</strong> znajduje się w
 					strefie{' '}
 					<strong>F.1.MN.42 – zabudowa mieszkaniowa jednorodzinna</strong>,
 					natomiast pozostała część –{' '}
