@@ -26,7 +26,7 @@ import { siteConfig } from '@/config/site.config';
 import { createMetadata } from '@/lib/metadata';
 
 const PLOT_DETAIL: PlotDetails = {
-	price: 150000,
+	price: 114999,
 	location: 'Gilowice',
 	streetAddress: '',
 	surface: 2128,

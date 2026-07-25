@@ -18,7 +18,10 @@ interface Props {
 export const PlotOffer = ({ gallery, details }: Props) => {
 	const { breakpoint } = useBreakpoints();
 
-	const pricePerM2 = Math.round(details.price/details.surface)
+	// const pricePerM2 = Math.round(details.price/details.surface)
+	const pricePerM2 = details.surface > 0
+		? (details.price / details.surface).toFixed(2)
+		: 0;
 
 	return (
 		<section className={styles.section}>

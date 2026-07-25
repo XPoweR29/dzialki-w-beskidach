@@ -10,7 +10,7 @@ export const offers: PlotCard[] = [
 		destination: 'rolna (zmiana MPZP)',
 		location: 'Pewel Ślemieńska',
 		pageSlug: 'dzialka-inwestycyjna-na-sprzedaz-pewel-slemienska',
-		pricePerM: '110',
+		pricePerM: '76,77',
 	},
 	{
 		cardImg: plot2,
@@ -28,6 +28,6 @@ export const offers: PlotCard[] = [
 		destination: 'rolna',
 		location: 'Gilowice',
 		pageSlug: 'dzialka-rolna-2128m2-gilowice',
-		pricePerM: '70',
+		pricePerM: '54,04',
 	},
 ];

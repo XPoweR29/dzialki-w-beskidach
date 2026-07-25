@@ -36,7 +36,7 @@ import { createMetadata } from '@/lib/metadata';
 import { siteConfig } from '@/config/site.config';
 
 const PLOT_DETAIL: PlotDetails = {
-	price: 1116170,
+	price: 779000,
 	location: 'Pewel Ślemieńska',
 	streetAddress: 'Krakowska',
 	surface: 10147,
