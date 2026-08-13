@@ -18,7 +18,7 @@ export const sendEmail = async (data: ContactFormData) => {
 	try {
 		const { data: resendData, error: resendError } = await resend.emails.send({
 			from: siteConfig.contact.email,
-			to: [siteConfig.contact.email],
+			to: ['rancho.adama@gmail.com'],
 			subject: 'Wiadomość z formularza kontaktowego',
 			text: message,
 			react: ContactTemplate({
