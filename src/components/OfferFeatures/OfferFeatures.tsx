@@ -7,28 +7,36 @@ import Image from 'next/image';
 import invest from '../../assets/icons/icon_invest.svg';
 import house from '../../assets/icons/icon_house.svg';
 import nature from '../../assets/icons/icon_nature.svg';
-import { useInView } from 'motion/react';
+import { useInView, motion } from 'motion/react';
+
+const FEATURES = [
+   { icon: invest, title: 'Pewna inwestycja', alt: 'Działka pod inwestycję' },
+   { icon: house, title: 'Pod dom lub rekreację', alt: 'Działka pod budowę domu' },
+   { icon: nature, title: 'Spokój i natura', alt: 'Blisko natury' },
+];
 
 export const OfferFeatures = ({ className }: {className?: string}) => {
 	const containerRef = useRef(null);
-	const inView = useInView(containerRef, {once: true, amount: 1});
+	const inView = useInView(containerRef, {once: true, amount: 0.2});
 
 	return (
-		<div className={`${styles.feature} ${className}`} ref={containerRef}>
-			<div className={`${styles.item} ${inView ? styles['item--anime'] : ''}`} style={{animationDelay: "0"}}>
-				<Image src={invest} alt='Działka pod inwestycję' draggable={false} />
-				<p>Pewna inwestycja</p>
-			</div>
-
-			<div className={`${styles.item} ${inView ? styles['item--anime'] : ''}`} style={{animationDelay: "0.3s"}}>
-				<Image src={house} alt='Działka pod budowę domu' draggable={false} />
-				<p>Pod dom lub rekreację</p>
-			</div>
-
-			<div className={`${styles.item} ${inView ? styles['item--anime'] : ''}`} style={{animationDelay: "0.6s"}}>
-				<Image src={nature} alt='Blisko natury' draggable={false} />
-				<p>Spokój i natura</p>
-			</div>
+		<div className={`${styles.feature} ${className || ''}`} ref={containerRef}>
+			{FEATURES.map((feature, index) => (
+				<motion.div
+					key={index}
+					className={styles.item}
+					initial={{ opacity: 0, scale: 0, x: -20}}
+					whileInView={{ opacity: 1, scale: 1, x: 0 }}
+					viewport={{ once: false, amount: 0.1 }}
+					transition={{
+						duration: 0.75,
+						delay: index * 0.25,
+						ease: [0.25, 0.1, 0.25, 1.0],
+					}}>
+					<Image src={feature.icon} alt={feature.alt} draggable={false} />
+					<p>{feature.title}</p>
+				</motion.div>
+			))}
 		</div>
 	);
 };

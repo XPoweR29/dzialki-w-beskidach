@@ -15,12 +15,6 @@
 		width: 120px;
 		height: 120px;
 		gap: 1em;
-		opacity: 0;
-		scale: 0;
-
-		&--anime {
-			animation: scale-In 1s ease both;
-		}
 	}
 
 	img {
