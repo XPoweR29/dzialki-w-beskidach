@@ -1,13 +1,12 @@
 'use client';
 
-import React, { useRef } from 'react';
 import styles from './OfferFeatures.module.scss';
 import Image from 'next/image';
 
 import invest from '../../assets/icons/icon_invest.svg';
 import house from '../../assets/icons/icon_house.svg';
 import nature from '../../assets/icons/icon_nature.svg';
-import { useInView, motion } from 'motion/react';
+import { motion } from 'motion/react';
 
 const FEATURES = [
    { icon: invest, title: 'Pewna inwestycja', alt: 'Działka pod inwestycję' },
@@ -16,18 +15,15 @@ const FEATURES = [
 ];
 
 export const OfferFeatures = ({ className }: {className?: string}) => {
-	const containerRef = useRef(null);
-	const inView = useInView(containerRef, {once: true, amount: 0.2});
-
 	return (
-		<div className={`${styles.feature} ${className || ''}`} ref={containerRef}>
+		<div className={`${styles.feature} ${className || ''}`}>
 			{FEATURES.map((feature, index) => (
 				<motion.div
 					key={index}
 					className={styles.item}
 					initial={{ opacity: 0, scale: 0, x: -20}}
 					whileInView={{ opacity: 1, scale: 1, x: 0 }}
-					viewport={{ once: false, amount: 0.1 }}
+					viewport={{ once: true, amount: 0.1 }}
 					transition={{
 						duration: 0.75,
 						delay: index * 0.25,
